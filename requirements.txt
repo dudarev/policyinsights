@@ -1,4 +1,1 @@
-dj-database-url==0.4.2
-Django==2.0.2
-gunicorn==19.7.1
-pytz==2018.3
+-r requirements/heroku.txt
