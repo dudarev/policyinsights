@@ -9,5 +9,5 @@ DATABASES['default'].update(dj_database_url.config(conn_max_age=500))
 
 # Simplified static file serving.
 # https://warehouse.python.org/project/whitenoise/
-MIDDLEWARE_CLASSES = ('whitenoise.middleware.WhiteNoiseMiddleware', ) + MIDDLEWARE_CLASSES
+MIDDLEWARE = ('whitenoise.middleware.WhiteNoiseMiddleware', ) + MIDDLEWARE
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
