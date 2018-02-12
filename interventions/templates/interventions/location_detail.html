@@ -5,4 +5,11 @@
 {% endblock %}
 
 {% block content %}
+    <p>
+    <form action="/locations/{{ location.pk }}/intervention-categories/search">
+        Intervention category:<br>
+        <input type="text" name="q"><br>
+        <input type="submit" value="Search">
+    </form>
+    </p>
 {% endblock %}
