@@ -11,7 +11,7 @@ class LocationsSearchView(ListView):
     def get_queryset(self):
         queryset = Location.objects.all()
         if self.request.GET.get('q'):
-            queryset = queryset.filter(name__contains=self.request.GET.get('q'))
+            queryset = queryset.filter(name__icontains=self.request.GET.get('q'))
         return queryset
 
 
