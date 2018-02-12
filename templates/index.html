@@ -10,4 +10,12 @@
     {% else %}
         <a href="{% url 'login' %}">Login</a>
     {% endif %}
+
+    <p>
+    <form action="/locations/search" action="POST">
+        Location:<br>
+        <input type="text" name="q"><br>
+        <input type="submit" value="Search">
+    </form>
+    </p>
 {% endblock %}
