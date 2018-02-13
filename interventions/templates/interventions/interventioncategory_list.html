@@ -7,7 +7,7 @@
 {% block content %}
     <ul>
     {% for intervention_category in object_list %}
-        <li><a href="/intervention-category/{{ intervention_category.id }}">{{ intervention_category.name }}</a></li>
+        <li><a href="/intervention-categories/{{ intervention_category.id }}">{{ intervention_category.name }}</a></li>
     {% endfor %}
     </ul>
 {% endblock %}

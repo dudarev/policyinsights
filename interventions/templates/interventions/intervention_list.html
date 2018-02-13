@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <h1>Policy Insights - {{ location.name }} - {{ intervention_category.name }}</h1>
+{% endblock %}
+
+{% block content %}
+    <ul>
+    {% for intervention in object_list %}
+        <li><a href="/interventions/{{ intervention.id }}">{{ intervention.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% endblock %}
