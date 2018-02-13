@@ -10,4 +10,9 @@
         <li><a href="/interventions/{{ intervention.id }}">{{ intervention.name }}</a></li>
     {% endfor %}
     </ul>
+
+    <form action="/intervention-categories/{{ intervention_category.id }}" method="GET">
+        {{ form }}
+        <input type="submit" value="Submit" />
+    </form>
 {% endblock %}
