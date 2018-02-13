@@ -1,3 +1,4 @@
+from copy import copy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 
@@ -61,7 +62,9 @@ class InteventionsSearchView(ListView):
         context['location'] = intervention_category.location
         # if not GET parameters are specified all checkboxes are selected
         if not self.request.GET:
-            base_fields = InterventionFilterForm.base_fields
+            base_fields = copy(InterventionFilterForm.base_fields)
+            base_fields.pop('cost_from')
+            base_fields.pop('cost_to')
             choices = {f: [c[0] for c in base_fields[f].choices] for f in base_fields}
         else:
             choices = self.request.GET
