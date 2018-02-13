@@ -15,5 +15,5 @@ class InterventionFilterForm(Form):
         widget=CheckboxSelectMultiple,
         choices=Intervention.METHODOLOGY_CHOICES,
         required=False)
-    cost_from = DecimalField(required=False)
-    cost_to = DecimalField(required=False)
+    cost_from = DecimalField(required=False, initial=0)
+    cost_to = DecimalField(required=False, initial=1000000000)

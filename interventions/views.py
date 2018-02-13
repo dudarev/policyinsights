@@ -65,8 +65,10 @@ class InteventionsSearchView(ListView):
             base_fields = copy(InterventionFilterForm.base_fields)
             base_fields.pop('cost_from')
             base_fields.pop('cost_to')
-            choices = {f: [c[0] for c in base_fields[f].choices] for f in base_fields}
+            initial = {f: [c[0] for c in base_fields[f].choices] for f in base_fields}
+            initial['cost_from'] = 0
+            initial['cost_to'] = 1000000000
         else:
-            choices = self.request.GET
-        context['form'] = InterventionFilterForm(choices)
+            initial = self.request.GET
+        context['form'] = InterventionFilterForm(initial)
         return context
