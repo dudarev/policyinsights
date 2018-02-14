@@ -17,7 +17,7 @@
 - Autocomplete works when user enters intervention (2)
 - + User may see interventions search results (3)
 - + User may filter search results by expected cost (from, to), status (planning, in progress, complete), intervention type (rebate, tax expenditure, communication, predictive analysis), methodology (3)
-- -> In each search results in the list user may see (3)
+- + In each search results in the list user may see (3)
     - title
     - partial description
     - annual cost
@@ -25,7 +25,13 @@
     - number of participants
     - number of times replicated
 - In a single search result user may see graph and table (4)
-- In a single search result user may see key indicators (number of participants, property crime incidents, cost per household, number of iterations, funding source) (4)
+- -> In a single search result user may see key indicators (4)
+    + number of participants
+    - property crime incidents
+    - cost per household
+    - number of iterations
+    - funding source
+    - contact
 - User may click a link "What do you think" (4)
 - User may click links "Get the Data", "Get the Code", "Help me implement it!" (4)
 - User may see the program description (4)

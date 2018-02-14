@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}
+    <h1><a href="/">Policy Insights</a> - {{ object.name }}</h1>
+{% endblock %}
+
+{% block content %}
+    <div>
+    {{ object.description | default_if_none:"" | linebreaksbr}}
+    </div>
+    <p>
+        {% if object.anual_cost %}
+            <strong>anual cost:</strong> {{ object.anual_cost | default_if_none:"" }}<br>
+        {% endif %}
+        {% if object.cost_per_household %}
+            <strong>cost per household:</strong> {{ object.cost_per_household | default_if_none:"" }}<br>
+        {% endif %}
+        {% if object.years_active %}
+            <strong>years active:</strong> {{ object.years_active | default_if_none:"" }}<br>
+        {% endif %}
+        {% if object.number_participants %}
+            <strong>number of participants:</strong> {{ object.number_participants | default_if_none:"" }}<br>
+        {% endif %}
+        {% if object.number_replicated %}
+            <strong>number of times replicated:</strong> {{ object.number_replicated | default_if_none:"" }}<br>
+        {% endif %}
+
+        {% if object.number_incidents %}
+            <strong>number of crime incidents:</strong> {{ object.number_incidents| default_if_none:"" }}<br>
+        {% endif %}
+        {% if object.number_iterations %}
+            <strong>number of iterations:</strong> {{ object.number_iterations | default_if_none:"" }}<br>
+        {% endif %}
+        {% if object.funding_source %}
+            <strong>funding source:</strong> {{ object.funding_source | default_if_none:"" }}<br>
+        {% endif %}
+    </p>
+
+    <p>
+    {% if object.contact %}
+        <strong>contact:</strong><br>
+        {{ object.contact | default_if_none:"" | linebreaksbr}}<br>
+    {% endif %}
+    </p>
+{% endblock %}

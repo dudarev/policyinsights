@@ -45,6 +45,7 @@ class Intervention(models.Model):
 
     cost = models.DecimalField(null=True, max_digits=12, decimal_places=2, default=None, blank=True)
     anual_cost = models.DecimalField(null=True, max_digits=12, decimal_places=2, default=None, blank=True)
+    cost_per_household = models.DecimalField(null=True, max_digits=12, decimal_places=2, default=None, blank=True)
     status = models.CharField(
         choices=STATUS_CHOICES,
         max_length=5,
@@ -64,6 +65,10 @@ class Intervention(models.Model):
     years_active = models.TextField(null=True, max_length=200, default=None, blank=True)
     number_participants = models.IntegerField(null=True, default=None, blank=True)
     number_replicated = models.IntegerField(null=True, default=None, blank=True)
+    number_iterations = models.IntegerField(null=True, default=None, blank=True)
+    number_incidents = models.IntegerField(null=True, default=None, blank=True, verbose_name="Number of crime incidents")
+    funding_source = models.CharField(max_length=200, null=True, default=None, blank=True)
+    contact = models.TextField(null=True, max_length=1000, default=None, blank=True)
 
     def __str__(self):
         return self.name

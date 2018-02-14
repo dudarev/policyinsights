@@ -38,7 +38,7 @@ class InterventionCategoriesSearchView(ListView):
         return context
 
 
-class InteventionsSearchView(ListView):
+class InterventionsSearchView(ListView):
 
     model = Intervention
 
@@ -72,3 +72,8 @@ class InteventionsSearchView(ListView):
             initial = self.request.GET
         context['form'] = InterventionFilterForm(initial)
         return context
+
+
+class InterventionsDetailView(DetailView):
+
+    model = Intervention
