@@ -43,19 +43,27 @@ class Intervention(models.Model):
         ('rd', 'Regression Discontinuity'),
     )
 
-    cost = models.DecimalField(default=0, max_digits=12, decimal_places=2)
+    cost = models.DecimalField(null=True, max_digits=12, decimal_places=2, default=None, blank=True)
+    anual_cost = models.DecimalField(null=True, max_digits=12, decimal_places=2, default=None, blank=True)
     status = models.CharField(
         choices=STATUS_CHOICES,
-        max_length=5
+        max_length=5,
+        default='n'
     )
     type = models.CharField(
         choices=TYPE_CHOICES,
-        max_length=5
+        max_length=5,
+        default='n'
     )
     methodology = models.CharField(
         choices=METHODOLOGY_CHOICES,
-        max_length=5
+        max_length=5,
+        default='n'
     )
+    description = models.TextField(null=True, max_length=1000, default=None, blank=True)
+    years_active = models.TextField(null=True, max_length=200, default=None, blank=True)
+    number_participants = models.IntegerField(null=True, default=None, blank=True)
+    number_replicated = models.IntegerField(null=True, default=None, blank=True)
 
     def __str__(self):
         return self.name
