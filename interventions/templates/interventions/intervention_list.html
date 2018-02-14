@@ -5,11 +5,30 @@
 {% endblock %}
 
 {% block content %}
-    <ul>
     {% for intervention in object_list %}
-        <li><a href="/interventions/{{ intervention.id }}">{{ intervention.name }}</a></li>
+        <div>
+            <h2>
+                <a href="/interventions/{{ intervention.id }}">{{ intervention.name }}</a>
+            </h2>
+            <p>
+                {{ intervention.description | default_if_none:"" | truncatewords:50 }}
+            </p>
+            <p>
+                {% if intervention.anual_cost %}
+                <strong>anual cost:</strong> {{ intervention.anual_cost | default_if_none:"" }}<br>
+                {% endif %}
+                {% if intervention.years_active %}
+                <strong>years active:</strong> {{ intervention.years_active | default_if_none:"" }}<br>
+                {% endif %}
+                {% if intervention.number_participants %}
+                <strong>number of participants:</strong> {{ intervention.number_participants | default_if_none:"" }}<br>
+                {% endif %}
+                {% if intervention.number_replicated %}
+                <strong>number of times replicated:</strong> {{ intervention.number_replicated | default_if_none:"" }}<br>
+                {% endif %}
+            </p>
+        </div>
     {% endfor %}
-    </ul>
 
     <form action="/intervention-categories/{{ intervention_category.id }}" method="GET">
         {{ form }}
