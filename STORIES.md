@@ -25,8 +25,8 @@
     - number of participants
     - number of times replicated
 - In a single search result user may see graph and table (4)
-- -> In a single search result user may see key indicators (4)
-    + number of participants
+- + In a single search result user may see key indicators (4)
+    - number of participants
     - property crime incidents
     - cost per household
     - number of iterations
@@ -34,8 +34,8 @@
     - contact
 - User may click a link "What do you think" (4)
 - User may click links "Get the Data", "Get the Code", "Help me implement it!" (4)
-- User may see the program description (4)
-- User may see the program contact (4)
++ User may see the program description (4)
++ User may see the program contact (4)
 - User may see a table used for the graph (5)
 - User may sort the table (5)
 - User may submit Case Study with name, email, program name, data or paper, more information (6)
