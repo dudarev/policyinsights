@@ -10,6 +10,8 @@
 - + User may login
 - + User may logout
 - User may click About page (1)
+- User may click Your account link and see the page (1)
+- User may click Home link and go to main page (1)
 - User may click 'Submit your case study' (1)
 - + User may enter location (1)
 - Autocomplete works when user enters location (1)
