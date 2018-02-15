@@ -9,9 +9,9 @@
 - User may register
 - + User may login
 - + User may logout
-- User may click About page (1)
+- + User may click About page (1)
 - User may click Your account link and see the page (1)
-- User may click Home link and go to main page (1)
+- + User may click Home link and go to main page (1)
 - User may click 'Submit your case study' (1)
 - + User may enter location (1)
 - Autocomplete works when user enters location (1)
@@ -36,11 +36,16 @@
     - contact
 - User may click a link "What do you think" (4)
 - User may click links "Get the Data", "Get the Code", "Help me implement it!" (4)
-+ User may see the program description (4)
-+ User may see the program contact (4)
+- + User may see the program description (4)
+- + User may see the program contact (4)
 - User may see a table used for the graph (5)
 - User may sort the table (5)
-- User may submit Case Study with name, email, program name, data or paper, more information (6)
+- -> User may submit Case Study with
+    - name
+    - email
+    - program name
+    - more information (6)
+- User may submit a file with Case Study form
 
 
 # Data collection module

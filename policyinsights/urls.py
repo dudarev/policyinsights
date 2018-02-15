@@ -27,6 +27,7 @@ urlpatterns = [
     url(r'^login/$', auth_views.login, name='login'),
     url(r'^logout/$', auth_views.logout, name='logout'),
     url('^$', TemplateView.as_view(template_name='index.html'), name='home'),
+    url('^account/$', TemplateView.as_view(template_name='account.html'), name='account'),
     path('', include('interventions.urls')),
     path('about/', flatpage_views.flatpage, {'url': '/about/'}, name='about'),
 ]
