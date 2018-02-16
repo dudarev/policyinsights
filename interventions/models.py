@@ -81,5 +81,8 @@ class CaseStudy(models.Model):
     more_information = models.TextField(max_length=2000, blank=True, null=True)
     added_at = models.DateTimeField(auto_now_add=True)
 
+    class Meta:
+        verbose_name_plural = "Case studies"
+
     def __str__(self):
         return '{} by {}'.format(self.program_name, self.user_name)
