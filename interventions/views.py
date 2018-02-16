@@ -1,9 +1,10 @@
 from copy import copy
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
+from django.views.generic.edit import FormView
 
 from .models import Intervention, InterventionCategory, Location
-from .forms import InterventionFilterForm
+from .forms import InterventionFilterForm, CaseStudyForm
 
 
 class LocationsSearchView(ListView):
@@ -77,3 +78,13 @@ class InterventionsSearchView(ListView):
 class InterventionsDetailView(DetailView):
 
     model = Intervention
+
+
+class CaseStudyFormView(FormView):
+    template_name = 'case_study_form.html'
+    form_class = CaseStudyForm
+    success_url = '/thanks/'
+
+    def form_valid(self, form):
+        form.save()
+        return super(CaseStudyFormView, self).form_valid(form)

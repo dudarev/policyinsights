@@ -72,3 +72,14 @@ class Intervention(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class CaseStudy(models.Model):
+    user_name = models.CharField(max_length=300, verbose_name='Name')
+    email = models.EmailField(max_length=300)
+    program_name = models.CharField(max_length=300)
+    more_information = models.TextField(max_length=2000, blank=True, null=True)
+    added_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return '{} by {}'.format(self.program_name, self.user_name)

@@ -1,4 +1,6 @@
 from django.urls import path
+from django.views.generic import TemplateView
+
 from interventions import views
 
 
@@ -14,4 +16,8 @@ urlpatterns = [
     path(
         'interventions/<int:pk>',
         views.InterventionsDetailView.as_view(), name='intervention-detail'),
+    path(
+        'submit/',
+        views.CaseStudyFormView.as_view(), name='case-study-form'),
+    path('thanks/', TemplateView.as_view(template_name='thanks.html'), name='thanks'),
 ]

@@ -1,5 +1,5 @@
-from django.forms import Form, MultipleChoiceField, CheckboxSelectMultiple, DecimalField
-from .models import Intervention
+from django.forms import Form, MultipleChoiceField, CheckboxSelectMultiple, DecimalField, ModelForm
+from .models import Intervention, CaseStudy
 
 
 class InterventionFilterForm(Form):
@@ -17,3 +17,9 @@ class InterventionFilterForm(Form):
         required=False)
     cost_from = DecimalField(required=False, initial=0)
     cost_to = DecimalField(required=False, initial=1000000000)
+
+
+class CaseStudyForm(ModelForm):
+    class Meta:
+        model = CaseStudy
+        fields = ['user_name', 'email', 'program_name', 'more_information']
