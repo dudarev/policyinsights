@@ -34,6 +34,7 @@ ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'arcane-citadel-66296.herokuapp.com']
 INSTALLED_APPS = [
     'interventions.apps.InterventionsConfig',
     'django.contrib.admin',
+    'registration',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -126,5 +127,8 @@ STATIC_URL = '/static/'
 LOGIN_REDIRECT_URL = 'home'
 LOGOUT_REDIRECT_URL = 'home'
 
-# needed for flatpages
-SITE_ID = 1
+# http://django-registration-redux.readthedocs.io/en/latest/quickstart.html
+ACCOUNT_ACTIVATION_DAYS = 7  # one-week activation window
+REGISTRATION_AUTO_LOGIN = True  # automatically log the user in
+
+FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixtures'), ]

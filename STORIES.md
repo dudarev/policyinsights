@@ -6,13 +6,13 @@
 - + Admin may add intervention category from UI
 - + Admin may add intervention from UI
 - Admin may add interventions from script
-- User may register
+- + User may register
 - + User may login
 - + User may logout
 - + User may click About page (1)
-- User may click Your account link and see the page (1)
+- + User may click Your account link and see the page (1)
 - + User may click Home link and go to main page (1)
-- User may click 'Submit your case study' (1)
+- + User may click 'Submit your case study' (1)
 - + User may enter location (1)
 - Autocomplete works when user enters location (1)
 - + User may enter intervention category by title (2)
@@ -40,7 +40,7 @@
 - + User may see the program contact (4)
 - User may see a table used for the graph (5)
 - User may sort the table (5)
-- -> User may submit Case Study with
+- + User may submit Case Study with
     - name
     - email
     - program name

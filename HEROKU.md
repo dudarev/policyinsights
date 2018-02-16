@@ -15,3 +15,11 @@ heroku run python manage.py migrate
 ```
 heroku run python manage.py createsuperuser
 ```
+
+## Enabling Sendgrid
+
+```
+heroku addons:create sendgrid:starter
+heroku config:get SENDGRID_USERNAME
+heroku config:get SENDGRID_PASSWORD
+```
