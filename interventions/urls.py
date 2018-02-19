@@ -20,4 +20,7 @@ urlpatterns = [
         'submit/',
         views.CaseStudyFormView.as_view(), name='case-study-form'),
     path('thanks/', TemplateView.as_view(template_name='thanks.html'), name='thanks'),
+    path(
+        'interventions/<int:pk>/data.csv',
+        views.intervention_csv_view, name='intervention-csv-data'),
 ]

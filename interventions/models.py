@@ -69,6 +69,7 @@ class Intervention(models.Model):
     number_incidents = models.IntegerField(null=True, default=None, blank=True, verbose_name="Number of crime incidents")
     funding_source = models.CharField(max_length=200, null=True, default=None, blank=True)
     contact = models.TextField(null=True, max_length=1000, default=None, blank=True)
+    csv_data = models.TextField(null=True, blank=True, default=None, max_length=2000)
 
     def __str__(self):
         return self.name

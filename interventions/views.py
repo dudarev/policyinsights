@@ -1,4 +1,6 @@
 from copy import copy
+
+from django.http import HttpResponse
 from django.views.generic.list import ListView
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import FormView
@@ -78,6 +80,19 @@ class InterventionsSearchView(ListView):
 class InterventionsDetailView(DetailView):
 
     model = Intervention
+
+
+def intervention_csv_view(request, pk):
+    response = HttpResponse(content_type='text/csv')
+    try:
+        intervention = Intervention.objects.get(pk=pk)
+        csv_data = intervention.csv_data
+    except Intervention.DoesNotExist:
+        csv_data = ''
+    if not csv_data:
+        csv_data = ''
+    response.write(csv_data)
+    return response
 
 
 class CaseStudyFormView(FormView):
