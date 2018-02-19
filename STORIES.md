@@ -1,61 +1,52 @@
-# Clearing house module
+# 0.1
+
+## Mini-MVP
+
+MVP just for two users Christina and Artem. It will be deployed to pre-production.
 
 - + Admin may login
 - + Admin may add location from UI
-- Admin may add locations from script
-- + Admin may add intervention category from UI
-- + Admin may add intervention from UI
-- Admin may add interventions from script
+- ~ Admin may add intervention from UI (intervention -> program)
 - + User may register
 - + User may reset password
 - + User may login
 - + User may logout
-- + User may click About page (1)
-- + User may click Your account link and see the page (1)
-- + User may click Home link and go to main page (1)
-- + User may click 'Submit your case study' (1)
-- + User may enter location (1)
-- Autocomplete works when user enters location (1)
-- + User may enter intervention category by title (2)
-- Autocomplete works when user enters intervention (2)
-- + User may see interventions search results (3)
-- + User may filter search results by expected cost (from, to), status (planning, in progress, complete), intervention type (rebate, tax expenditure, communication, predictive analysis), methodology (3)
-- + In each search results in the list user may see (3)
-    - title
-    - partial description
-    - annual cost
-    - years active
-    - number of participants
-    - number of times replicated
-- In a single search result user may see graph and table (4)
-- + In a single search result user may see key indicators (4)
-    - number of participants
-    - property crime incidents
-    - cost per household
-    - number of iterations
-    - funding source
-    - contact
-- + User may see the program description (4)
-- + User may see the program contact (4)
-- User may see a table used for the graph (5)
-- User may sort the table (5)
-- + User may submit Case Study with
-    - name
-    - email
-    - program name
-    - more information (6)
-- User may submit a file with Case Study form
+- + User may click About page
+- + User may click Your account link and see the page
+- + User may click Home link and go to main page
+- ~ User may create location
+- On the main page there is a list of all available locations
+- On the main page user may add program: location tag must be specified, more tags may be specified
+- User may visit location page
+- User may edit location page
+- On location page user may see all programs
+- User may see program page
+- User may edit program page
+
+Deploy to Christina's Heroku account and start poplulating it with real data from that point.
+
+## MVP
+
+Put some CSS styling framework when starting working on this.
+
+- Pagination of locations on main page
+- Pagination of programs on location page
+- If user specifies a tag which is not described she must describe the tag first, content is saved to drafts
+- User may see drafts
+- User may edit draft
+- User sees tag page
+- Tag page has a list of all programs containing that tag
+- Pagination of programs on tag page
+- User may leave a comment on program page
+- Admin may delete a comment
+- User may follow a program
+- There is a limit on how many programs a user may follow
+- User may stop following a program
+- User may add an her image in user profile
+- User may edit her name in user profile
+- User gets emails about updates to the programs she follows on daily bases (number of comments, number of updates etc.)
 
 
-# Data collection module
+# 0.2 and later
 
-- On the main page user may see links to 3 modules "Search for interventions", "Get expert help", "Refine, Repeat, and Measure your performance" (7)
-- On the main page user may watch a demo video (7)
-- On the main page user may submit a form to learn more with name and email (7)
-- A user may submit a program with name, description, documentation, program contact, data colection type (public, internal) (8)
-- For a program a user may submit data element library sources, data elements to be collected, document (9)
-- Admin may creat data element library sources in admin UI (9)
-- Admin may creat data element to be collected in admin UI (9)
-- A user may list all programs she created (10)
-- A user may go to a program and see a form (10)
-- A user may embed the form (10)
+- A general type wiki page (it may be used for people, events etc.)
