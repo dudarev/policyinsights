@@ -7,6 +7,7 @@
 - + Admin may add intervention from UI
 - Admin may add interventions from script
 - + User may register
+- + User may reset password
 - + User may login
 - + User may logout
 - + User may click About page (1)
@@ -34,8 +35,6 @@
     - number of iterations
     - funding source
     - contact
-- User may click a link "What do you think" (4)
-- User may click links "Get the Data", "Get the Code", "Help me implement it!" (4)
 - + User may see the program description (4)
 - + User may see the program contact (4)
 - User may see a table used for the graph (5)
