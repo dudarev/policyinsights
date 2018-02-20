@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 
+{% block title %}Policy Insigts - Edit Location{% endblock %}
+
 {% block content %}
     <div id="content">
-        {{ object.content }}
+        {{ object.content | linebreaksbr }}
     </div>
-    <a href="{% url 'location-update' object.slug %}">Update</a>
+    <div id="update" style="margin-top: 1em;">
+        <a href="{% url 'location-update' object.slug %}">Update</a>
+    </div>
 {% endblock %}

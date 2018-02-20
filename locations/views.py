@@ -1,17 +1,22 @@
-from django.views.generic import DetailView, UpdateView, CreateView
-from django.urls import reverse_lazy, reverse
+from django.views.generic import DetailView, UpdateView, CreateView, ListView
+from django.urls import reverse
 
 from .models import Location
+from .forms import LocationForm
 
 
-class LocationCreate(CreateView):
+class LocationCreateUpdateMixin():
 
     model = Location
-    fields = ['content', 'slug', ]
-    success_url = '/'
+    form_class = LocationForm
 
     def get_success_url(self):
         return reverse('location-detail', args=[self.object.slug])
+
+
+class LocationCreate(LocationCreateUpdateMixin, CreateView):
+
+    pass
 
 
 class LocationDetail(DetailView):
@@ -19,10 +24,11 @@ class LocationDetail(DetailView):
     model = Location
 
 
-class LocationUpdate(UpdateView):
+class LocationUpdate(LocationCreateUpdateMixin, UpdateView):
+
+    pass
+
+
+class LocationsList(ListView):
 
     model = Location
-    fields = ['content', 'slug', ]
-
-    def get_success_url(self):
-        return reverse('location-detail', args=[self.object.slug])

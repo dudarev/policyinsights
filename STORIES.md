@@ -15,7 +15,7 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + User may click and see Your account
 - + User may click Home link and go to main page
 - + User may create location
-- On the main page there is a list of all available locations
+- + On the main page there is a list of all available locations
 - On the main page user may add program: location tag must be specified, more tags may be specified
 - + User may visit location page
 - + User may edit location page
@@ -23,9 +23,11 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - User may see program page
 - User may edit program page
 
-Deploy to Christina's Heroku account and start poplulating it with real data from that point.
+Deploy to Christina's Heroku account and start populating it with real data from that point.
 
 ## MVP
+
+Set up backups.
 
 Put some CSS styling framework when starting working on this.
 

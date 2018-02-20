@@ -20,11 +20,13 @@ from django.contrib.flatpages import views as flatpage_views
 from django.urls import path, include
 from django.views.generic import TemplateView
 
+from locations.views import LocationsList
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('', LocationsList.as_view(), name='home'),
     path('', include('django.contrib.auth.urls')),
-    url('^$', TemplateView.as_view(template_name='index.html'), name='home'),
     url('^account/$', TemplateView.as_view(template_name='account.html'), name='account'),
     path('', include('interventions.urls')),
     path('', include('locations.urls')),
