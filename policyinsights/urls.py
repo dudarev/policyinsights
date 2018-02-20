@@ -27,6 +27,7 @@ urlpatterns = [
     url('^$', TemplateView.as_view(template_name='index.html'), name='home'),
     url('^account/$', TemplateView.as_view(template_name='account.html'), name='account'),
     path('', include('interventions.urls')),
+    path('', include('locations.urls')),
     path('about/', flatpage_views.flatpage, {'url': '/about/'}, name='about'),
     path('accounts/', include('registration.backends.default.urls')),
 ]
