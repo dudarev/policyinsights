@@ -28,7 +28,6 @@ urlpatterns = [
     path('', LocationsList.as_view(), name='home'),
     path('', include('django.contrib.auth.urls')),
     url('^account/$', TemplateView.as_view(template_name='account.html'), name='account'),
-    path('', include('interventions.urls')),
     path('', include('locations.urls')),
     path('', include('programs.urls')),
     path('about/', flatpage_views.flatpage, {'url': '/about/'}, name='about'),

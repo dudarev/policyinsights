@@ -13,7 +13,7 @@ Locations could be treated as special tags that are required for any interventio
 Three types of pages:
 
 - location: /l/<location-slug>
-- interventions: /l/<location-slug>/i/<intervention-slug>
+- programs: /l/<location-slug>/p/<program-slug>
 - tag: /t/<tag-slug>
 
 Intervention description would look like:
