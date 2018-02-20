@@ -6,7 +6,7 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 
 - + Admin may login
 - + Admin may add location from UI
-- ~ Admin may add intervention from UI (intervention -> program)
+- ~ Admin may add  program from UI (intervention -> program)
 - + User may register
 - + User may reset password
 - + User may login
@@ -29,6 +29,8 @@ Deploy to Christina's Heroku account and start poplulating it with real data fro
 
 Put some CSS styling framework when starting working on this.
 
+- Message about successfully created location, program, tag
+- Link for admins in About page to edit content
 - Pagination of locations on main page
 - Pagination of programs on location page
 - If user specifies a tag which is not described she must describe the tag first, content is saved to drafts
@@ -45,6 +47,7 @@ Put some CSS styling framework when starting working on this.
 - User may add an her image in user profile
 - User may edit her name in user profile
 - User gets emails about updates to the programs she follows on daily bases (number of comments, number of updates etc.)
+- Markdown may be used in wiki pages
 
 
 # 0.2 and later
