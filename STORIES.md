@@ -11,8 +11,8 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + User may reset password
 - + User may login
 - + User may logout
-- + User may click About page
-- + User may click Your account link and see the page
+- + User may click and see About page
+- + User may click and see Your account
 - + User may click Home link and go to main page
 - ~ User may create location
 - On the main page there is a list of all available locations
