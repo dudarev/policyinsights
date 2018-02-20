@@ -23,3 +23,9 @@ heroku addons:create sendgrid:starter
 heroku config:get SENDGRID_USERNAME
 heroku config:get SENDGRID_PASSWORD
 ```
+
+## Reset database
+
+```
+heroku pg:reset DATABASE_URL
+```
