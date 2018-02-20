@@ -4,9 +4,14 @@
 
 {% block content %}
     <h1>Locations</h1>
-    <ul>
-    {% for object in object_list %}
-        <li><a href="{% url 'location-detail' object.slug %}">{{ object.slug }}</a></li>
-    {% endfor %}
-    </ul>
+    <div>
+        <ul>
+            {% for object in object_list %}
+                <li><a href="{% url 'location-detail' object.slug %}">{{ object.slug }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <a href="{% url 'location-create' %}">Create Location</a>
+    </div>
 {% endblock %}
