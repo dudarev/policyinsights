@@ -6,7 +6,7 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 
 - + Admin may login
 - + Admin may add location from UI
-- ~ Admin may add  program from UI (intervention -> program)
+- + Admin may add program from UI
 - + User may register
 - + User may reset password
 - + User may login
@@ -14,11 +14,11 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + User may click and see About page
 - + User may click and see Your account
 - + User may click Home link and go to main page
-- ~ User may create location
+- + User may create location
 - On the main page there is a list of all available locations
 - On the main page user may add program: location tag must be specified, more tags may be specified
-- User may visit location page
-- User may edit location page
+- + User may visit location page
+- + User may edit location page
 - On location page user may see all programs
 - User may see program page
 - User may edit program page
@@ -29,7 +29,6 @@ Deploy to Christina's Heroku account and start poplulating it with real data fro
 
 Put some CSS styling framework when starting working on this.
 
-- Message about successfully created location, program, tag
 - Link for admins in About page to edit content
 - Pagination of locations on main page
 - Pagination of programs on location page
@@ -53,3 +52,4 @@ Put some CSS styling framework when starting working on this.
 # 0.2 and later
 
 - A general type wiki page (it may be used for people, events etc.)
+- Message about successfully created location, program, tag

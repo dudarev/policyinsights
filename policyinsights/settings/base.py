@@ -33,6 +33,7 @@ ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'arcane-citadel-66296.herokuapp.com']
 
 INSTALLED_APPS = [
     'locations.apps.LocationsConfig',
+    'programs.apps.ProgramsConfig',
     'interventions.apps.InterventionsConfig',
     'django.contrib.admin',
     'registration',

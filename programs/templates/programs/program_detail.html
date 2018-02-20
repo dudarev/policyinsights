@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block title %} Update program {% endblock %}
+
+{% block content %}
+    <div id="content">
+        {{ object.content }}
+    </div>
+    <a href="{% url 'location-update' object.slug %}">Update</a>
+{% endblock %}
