@@ -4,7 +4,7 @@
 
 {% block content %}
     <div id="content">
-        {{ object.content | linebreaksbr }}
+        {{ object.content | safe | linebreaksbr }}
     </div>
     <div id="update" style="margin-top: 1em;">
         <a href="{% url 'location-update' object.slug %}">Update</a>
