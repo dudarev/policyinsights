@@ -19,6 +19,14 @@ class LocationSlugField(Field):
             )
 
 
+class DisabledLocationSlugField(Field):
+    def prepare_value(self, value):
+        if value:
+            location = Location.objects.get(pk=value)
+            return location.slug
+        return value
+
+
 class ProgramCreateForm(ModelForm):
     location = LocationSlugField(label='Location slug')
     content = CharField(label='', widget=Textarea)
@@ -26,3 +34,15 @@ class ProgramCreateForm(ModelForm):
     class Meta:
         model = Program
         fields = ['content', 'slug', 'location', ]
+
+
+class ProgramUpdateForm(ProgramCreateForm):
+    location = DisabledLocationSlugField(label='Location slug', disabled=True)
+
+    def clean_location(self):
+        # do not update location
+        instance = getattr(self, 'instance', None)
+        if instance and instance.id:
+          return instance.location
+        else:
+          return self.cleaned_data['location']

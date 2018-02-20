@@ -4,9 +4,12 @@
 
 {% block content %}
     <div id="content">
-        {{ object.content }}
+        {{ object.content | linebreaksbr }}
     </div>
     <div style="margin-top: 1em">
     <a href="{% url 'program-update' object.location.slug object.slug %}">Update</a>
+    </div>
+    <div style="margin-top: 1em">
+       Location: <a href="{% url 'location-detail' object.location.slug %}">{{ object.location.slug }}</a>
     </div>
 {% endblock %}

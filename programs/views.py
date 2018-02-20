@@ -1,26 +1,42 @@
+from django.http import Http404
 from django.views.generic import DetailView, UpdateView, CreateView
 from django.urls import reverse
+from django.utils.translation import gettext as _
 
 from .models import Program
-from .forms import ProgramCreateForm
+from .forms import ProgramCreateForm, ProgramUpdateForm
 
 
 class ProgramCreate(CreateView):
 
     model = Program
-    success_url = '/'
     form_class = ProgramCreateForm
 
+    def get_success_url(self):
+        return reverse('program-detail', args=[self.object.location.slug, self.object.slug])
 
-class ProgramDetail(DetailView):
+
+class GetProgramMixin:
+
+    def get_object(self, queryset=None):
+        slug = self.kwargs.get('slug', '')
+        location_slug = self.kwargs.get('location_slug', '')
+        try:
+            object = self.model.objects.filter(slug=slug, location__slug=location_slug).get()
+        except self.model.DoesNotExist:
+            raise Http404(_("Program does not exist."))
+        return object
+
+
+class ProgramDetail(GetProgramMixin, DetailView):
 
     model = Program
 
 
-class ProgramUpdate(UpdateView):
+class ProgramUpdate(GetProgramMixin, UpdateView):
 
     model = Program
-    fields = ['content', 'slug', ]
+    form_class = ProgramUpdateForm
 
     def get_success_url(self):
-        return reverse('program-detail', args=[self.object.slug])
+        return reverse('program-detail', args=[self.object.location.slug, self.object.slug])

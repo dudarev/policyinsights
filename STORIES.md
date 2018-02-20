@@ -20,8 +20,8 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + User may visit location page
 - + User may edit location page
 - + On location page user may see all programs
-- User may see program page
-- User may edit program page
+- + User may see program page
+- + User may edit program page
 
 Deploy to Christina's Heroku account and start populating it with real data from that point.
 
