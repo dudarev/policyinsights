@@ -6,5 +6,7 @@
     <div id="content">
         {{ object.content }}
     </div>
-    <a href="{% url 'location-update' object.slug %}">Update</a>
+    <div style="margin-top: 1em">
+    <a href="{% url 'program-update' object.location.slug object.slug %}">Update</a>
+    </div>
 {% endblock %}

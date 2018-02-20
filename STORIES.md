@@ -16,10 +16,10 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + User may click Home link and go to main page
 - + User may create location
 - + On the main page there is a list of all available locations
-- On the main page user may add program: location tag must be specified, more tags may be specified
+- + On the main page user may add program: location tag must be specified, more tags may be specified
 - + User may visit location page
 - + User may edit location page
-- On location page user may see all programs
+- + On location page user may see all programs
 - User may see program page
 - User may edit program page
 

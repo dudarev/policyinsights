@@ -23,6 +23,12 @@ class LocationDetail(DetailView):
 
     model = Location
 
+    def get_context_data(self, **kwargs):
+        context = super(LocationDetail, self).get_context_data()
+        programs = self.object.program_set.all()
+        context.update({'programs': programs})
+        return context
+
 
 class LocationUpdate(LocationCreateUpdateMixin, UpdateView):
 
