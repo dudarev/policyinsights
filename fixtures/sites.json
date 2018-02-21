@@ -14,5 +14,13 @@
     "domain": "arcane-citadel-66296.herokuapp.com",
     "name": "Policy Insights Heroku staging"
   }
+},
+{
+  "model": "sites.site",
+  "pk": 3,
+  "fields": {
+    "domain": "programinsights-alpha.herokuapp.com",
+    "name": "Policy Insights Alpha"
+  }
 }
 ]
