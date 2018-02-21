@@ -29,3 +29,7 @@ heroku config:get SENDGRID_PASSWORD
 ```
 heroku pg:reset DATABASE_URL
 ```
+
+## Database backups
+
+https://devcenter.heroku.com/articles/heroku-postgres-backups
