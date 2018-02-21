@@ -26,7 +26,12 @@ SECRET_KEY = 'f1t^op@)pdwpzjaoi$^o5^5^$bpui$d$6pskaqyo86!hd+4zao'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['0.0.0.0', 'localhost', 'arcane-citadel-66296.herokuapp.com']
+ALLOWED_HOSTS = [
+    '0.0.0.0',
+    'localhost',
+    'arcane-citadel-66296.herokuapp.com',
+    'programinsights-alpha.herokuapp.com',
+]
 
 
 # Application definition
