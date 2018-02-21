@@ -49,6 +49,8 @@ Put some CSS styling framework when starting working on this.
 - User may edit her name in user profile
 - User gets emails about updates to the programs she follows on daily bases (number of comments, number of updates etc.)
 - Markdown may be used in wiki pages
+- Only admins may edit location pages
+- Location data can be imported by admin from  https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml
 
 
 # 0.2 and later
