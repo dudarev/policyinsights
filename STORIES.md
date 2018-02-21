@@ -23,32 +23,34 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + User may see program page
 - + User may edit program page
 
-Deploy to Christina's Heroku account and start populating it with real data from that point.
-
 ## MVP
 
-Set up backups.
-
 Put some CSS styling framework when starting working on this.
+
+- User may leave a comment on program page
+- Admin may delete a comment
+
+- User may create a tag page
+- User sees tag page
+- If user specifies a tag which is not described she must describe the tag first
+- Tag page has a list of all programs containing that tag
 
 - Link for admins in About page to edit content
 - Pagination of locations on main page
 - Pagination of programs on location page
-- If user specifies a tag which is not described she must describe the tag first, content is saved to drafts
-- User may see drafts
-- User may edit draft
-- User sees tag page
-- Tag page has a list of all programs containing that tag
 - Pagination of programs on tag page
-- User may leave a comment on program page
-- Admin may delete a comment
+
 - User may follow a program
 - There is a limit on how many programs a user may follow
 - User may stop following a program
+
 - User may add an her image in user profile
 - User may edit her name in user profile
+
 - User gets emails about updates to the programs she follows on daily bases (number of comments, number of updates etc.)
+
 - Markdown may be used in wiki pages
+
 - Only admins may edit location pages
 - Location data can be imported by admin from  https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml
 
