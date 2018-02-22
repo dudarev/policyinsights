@@ -31,3 +31,9 @@ API docs:
 
 https://api.usaspending.gov/docs/endpoints
 https://api.usaspending.gov/api/v1/references/locations/
+
+## Serving static files with CDN
+
+As the app growth, consider serving static assets from CND:
+
+http://django-storages.readthedocs.io/en/latest/
