@@ -1,26 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html class="no-js" lang="en">
+
 <head>
-    {% block meta %}{% endblock %}
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {% block meta %}{% endblock %}
     <title>{% block title %}{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/foundation.min.css" %}">
+    <link rel="stylesheet" href="{% static "css/app.css" %}">
     {% block scripts %}{% endblock %}
 </head>
 <body>
 
-<div>
-    <a href="/">Home</a> |
-    <a href="/about/">About</a> |
-    <a href="/account/">Your Account</a> |
-    <a href="{% url 'program-create' %}">Create Program</a>
+<div class="top-bar">
+<div class="top-bar-left">
+<ul class="menu">
+<li class="menu-text">Policy Insights</li>
+</ul>
 </div>
+<div class="top-bar-right">
+    <ul class="menu">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'account' %}">Your Account</a></li>
+        <li><a href="{% url 'program-create' %}">Create Program</a></li>
+    </ul>
+</div>
+</div>
+
 <br>
 
+<div class="row medium-9 large-8 columns">
 {% block content %}
 {% endblock %}
+</div>
 
 {% block js-foot %}
 {% endblock %}

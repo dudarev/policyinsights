@@ -139,3 +139,7 @@ ACCOUNT_ACTIVATION_DAYS = 7  # one-week activation window
 REGISTRATION_AUTO_LOGIN = True  # automatically log the user in
 
 FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixtures'), ]
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "policyinsights/static/"),
+]
