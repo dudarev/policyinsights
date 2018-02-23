@@ -1,3 +1,7 @@
 .errorlist {
     color: indianred;
 }
+
+#id_honeypot {
+    display: none;
+}

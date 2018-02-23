@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'programs.apps.ProgramsConfig',
     'django.contrib.admin',
     'registration',
+    'django_comments',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
