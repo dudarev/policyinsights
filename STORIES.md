@@ -25,10 +25,8 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 
 ## MVP
 
-Put some CSS styling framework when starting working on this.
-
-- User may leave a comment on program page
-- Admin may delete a comment
+- + User may leave a comment on program page
+- + Admin may delete a comment
 
 - User may create a tag page
 - User sees tag page
@@ -44,7 +42,6 @@ Put some CSS styling framework when starting working on this.
 - There is a limit on how many programs a user may follow
 - User may stop following a program
 
-- User may add an her image in user profile
 - User may edit her name in user profile
 
 - User gets emails about updates to the programs she follows on daily bases (number of comments, number of updates etc.)
@@ -59,3 +56,5 @@ Put some CSS styling framework when starting working on this.
 
 - A general type wiki page (it may be used for people, events etc.)
 - Message about successfully created location, program, tag
+- User may add an her image in user profile
+- User may rate a program
