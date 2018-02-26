@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Policy Insights - Tags{% endblock %}
+
+{% block content %}
+    <h1>Tags</h1>
+    <div>
+        <ul>
+            {% for object in object_list %}
+                <li><a href="{% url 'location-detail' object.slug %}">{{ object.slug }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <a href="{% url 'tag-create' %}">Create tag</a>
+    </div>
+{% endblock %}

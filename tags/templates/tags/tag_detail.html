@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %}Policy Insigts - Edit Tag{% endblock %}
+
+{% block content %}
+    <div id="content">
+        {{ object.content | safe | linebreaksbr }}
+    </div>
+    <div id="update" style="margin-top: 1em;">
+        <a href="{% url 'tag-update' object.slug %}">Update</a>
+    </div>
+    <div style="margin-top: 1em;">
+        <hr>
+    </div>
+    <div id="programs" style="margin-top: 1em;">
+        <h2>Programs</h2>
+        <ul>
+            {% for program in programs %}
+                <li><a href="{% url 'program-detail' object.slug program.slug %}">{{ program.slug }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

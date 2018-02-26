@@ -28,15 +28,16 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + User may leave a comment on program page
 - + Admin may delete a comment
 
-- User may create a tag page
-- User sees tag page
-- If user specifies a tag which is not described she must describe the tag first
-- Tag page has a list of all programs containing that tag
+- + User may create a tag page
+- + User sees tag page
+- All wiki pages have links to pages that describe tags
+- Tag page has a search for values of a tag
+- If user visits a tag page that does not exists she is prompted to create it
 
 - Link for admins in About page to edit content
 - Pagination of locations on main page
 - Pagination of programs on location page
-- Pagination of programs on tag page
+- Pagination for search of programs on tag page
 
 - User may follow a program
 - There is a limit on how many programs a user may follow

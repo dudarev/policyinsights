@@ -39,6 +39,7 @@ ALLOWED_HOSTS = [
 INSTALLED_APPS = [
     'locations.apps.LocationsConfig',
     'programs.apps.ProgramsConfig',
+    'tags.apps.TagsConfig',
     'django.contrib.admin',
     'registration',
     'django_comments',
