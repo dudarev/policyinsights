@@ -37,3 +37,15 @@ https://api.usaspending.gov/api/v1/references/locations/
 As the app growth, consider serving static assets from CND:
 
 http://django-storages.readthedocs.io/en/latest/
+
+## Markdow
+
+https://github.com/neutronX/django-markdownx
+
+## Input Data Sanitization
+
+https://stackoverflow.com/questions/5641901/sanitizing-html-in-submitted-form-data
+
+- bleach
+- strip_tags
+- escape
