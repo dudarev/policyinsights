@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 
+{% load tags_filters %}
+
 {% block title %}PolicyInsights - Edit Location{% endblock %}
 
 {% block content %}
     <div id="content">
-        {{ object.content | safe | linebreaksbr }}
+        <!-- TODO: make sure content is safe -->
+        {{ object.content | add_tag_links | safe | linebreaksbr }}
     </div>
     <div id="update" style="margin-top: 1em;">
         <a href="{% url 'location-update' object.slug %}">Update</a>
