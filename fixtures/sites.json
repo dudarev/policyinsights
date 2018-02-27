@@ -12,7 +12,7 @@
   "pk": 2,
   "fields": {
     "domain": "arcane-citadel-66296.herokuapp.com",
-    "name": "Policy Insights Heroku staging"
+    "name": "PolicyInsights Heroku staging"
   }
 },
 {
@@ -20,7 +20,7 @@
   "pk": 3,
   "fields": {
     "domain": "programinsights-alpha.herokuapp.com",
-    "name": "Policy Insights Alpha"
+    "name": "PolicyInsights Alpha"
   }
 }
 ]
