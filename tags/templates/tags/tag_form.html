@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
 
-{% block title %}Create Tag{% endblock %}
+{% block title %}Describe Tag{% endblock %}
 
 {% block content %}
+    <h1>Describe Tag</h1>
     <form action="" method="post">
         {%  csrf_token %}
         {{  form.as_p }}
