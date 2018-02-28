@@ -49,3 +49,7 @@ https://stackoverflow.com/questions/5641901/sanitizing-html-in-submitted-form-da
 - bleach
 - strip_tags
 - escape
+
+## Doing less than, greater than in Postgres
+
+https://stackoverflow.com/questions/44531689/how-can-i-do-less-than-greater-than-in-json-postgres-fields
