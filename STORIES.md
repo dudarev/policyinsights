@@ -31,7 +31,7 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + User may create a tag page
 - + User sees tag page
 - + All wiki pages have links to pages that describe tags
-- If user visits a tag page that does not exists she is prompted to create it
+- + If user visits a tag page that does not exists she is prompted to create it
 - Tag page has a search for values of a tag
 
 - Link for admins in About page to edit content
