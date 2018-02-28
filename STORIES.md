@@ -32,25 +32,34 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + User sees tag page
 - + All wiki pages have links to pages that describe tags
 - + If user visits a tag page that does not exists she is prompted to create it
-- Tag page has a search for values of a tag
 
-- Link for admins in About page to edit content
+- Users have a way to provide comments to on data/programs/location they would like to see us add or other suggestions
+
+- On the main page users can see a map so that they know the future is the entire US
+
+- Users can rate the importance of the program
+- Users can rate the program
+
+- Users can select locality to compare
+- User may see comparison between localities with differences highlighted
+- Users can select program to compare
+- User may see comparison between programs with differences highlighted
+
 - Pagination of locations on main page
-- Pagination of programs on location page
-- Pagination for search of programs on tag page
 
 - User may follow a program
 - There is a limit on how many programs a user may follow
 - User may stop following a program
+- User gets emails about updates to the programs she follows on daily bases (number of comments, number of updates etc.)
 
 - User may edit her name in user profile
-
-- User gets emails about updates to the programs she follows on daily bases (number of comments, number of updates etc.)
 
 - Markdown may be used in wiki pages
 
 - Only admins may edit location pages
 - Location data can be imported by admin from  https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml
+
+- Link for admins in About page to edit content
 
 
 # 0.2 and later
@@ -59,3 +68,6 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - Message about successfully created location, program, tag
 - User may add an her image in user profile
 - User may rate a program
+- Tag page has a search for values of a tag
+- Pagination of programs on location page
+- Pagination for search of programs on tag page
