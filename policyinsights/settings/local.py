@@ -10,5 +10,6 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'policyinsights',
         'USER': 'policyinsights',
+        'PASSWORD': 'admin',
     }
 }
