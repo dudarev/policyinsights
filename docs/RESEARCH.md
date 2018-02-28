@@ -40,9 +40,11 @@ As the app growth, consider serving static assets from CND:
 
 http://django-storages.readthedocs.io/en/latest/
 
+
 ## Markdow
 
 https://github.com/neutronX/django-markdownx
+
 
 ## Input Data Sanitization
 
@@ -51,6 +53,7 @@ https://stackoverflow.com/questions/5641901/sanitizing-html-in-submitted-form-da
 - bleach
 - strip_tags
 - escape
+
 
 ## Doing less than, greater than in Postgres
 
@@ -64,3 +67,8 @@ https://en.wikipedia.org/wiki/Help:Infobox
 Infobox template example:
 
 https://en.wikipedia.org/wiki/Template:Infobox_book
+
+
+## Tags in OpenStreetMap
+
+https://wiki.openstreetmap.org/wiki/Tags
