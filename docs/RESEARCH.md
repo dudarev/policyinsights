@@ -5,6 +5,7 @@ Possible good JS-libraries for showing plots:
 - http://c3js.org/ - may load from CSV
 - http://www.chartjs.org/ - loads from JSON
 
+
 ## USAspending.gov source code
 
 ### Frontend
@@ -31,6 +32,7 @@ API docs:
 
 https://api.usaspending.gov/docs/endpoints
 https://api.usaspending.gov/api/v1/references/locations/
+
 
 ## Serving static files with CDN
 
