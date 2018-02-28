@@ -9,8 +9,11 @@ load_test_data_heroku:
 load_sites:
 	heroku run python manage.py loaddata sites
 
-migrate_heroku:
-	heroku run python manage.py migrate
+migrate_heroku_staging:
+	heroku run python manage.py migrate --remote=heroku
+
+migrate_heroku_production:
+	heroku run python manage.py migrate --remote=production
 
 # reset_interventions_heroku:
 # 	heroku run python manage.py migrate interventions zero
