@@ -1,0 +1,11 @@
+Hello,
+
+User '{{user}}' left new feedback:
+
+{{content}}
+
+---
+
+See feedbacks in admin site:
+
+{{admin_link}}
