@@ -33,9 +33,9 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + All wiki pages have links to pages that describe tags
 - + If user visits a tag page that does not exists she is prompted to create it
 
-- Logged in users see link to feedback page
-- Users have a way to provide comments on data/programs/location they would like to see us add or other suggestions
-- Users listed as feedback email receivers get emails with feedback
+- + Logged in users see link to feedback page
+- + Users have a way to provide comments on data/programs/location they would like to see us add or other suggestions
+- + Users listed as feedback email receivers get emails with feedback
 
 - On the main page users can see a map so that they know the future is the entire US
 
