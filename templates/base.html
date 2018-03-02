@@ -26,6 +26,9 @@
         <li><a href="{% url 'about' %}">About</a></li>
         <li><a href="{% url 'account' %}">Your Account</a></li>
         <li><a href="{% url 'program-create' %}">Create Program</a></li>
+        {% if user.is_authenticated %}
+        <li><strong><a href="{% url 'feedback' %}">Feedback</a></strong></li>
+        {% endif %}
     </ul>
 </div>
 </div>

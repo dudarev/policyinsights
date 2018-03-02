@@ -6,7 +6,6 @@ from .forms import LocationForm
 
 
 class LocationCreateUpdateMixin():
-
     model = Location
     form_class = LocationForm
 
@@ -15,12 +14,10 @@ class LocationCreateUpdateMixin():
 
 
 class LocationCreate(LocationCreateUpdateMixin, CreateView):
-
     pass
 
 
 class LocationDetail(DetailView):
-
     model = Location
 
     def get_context_data(self, **kwargs):
@@ -31,10 +28,8 @@ class LocationDetail(DetailView):
 
 
 class LocationUpdate(LocationCreateUpdateMixin, UpdateView):
-
     pass
 
 
 class LocationsList(ListView):
-
     model = Location

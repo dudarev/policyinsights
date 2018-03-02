@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}Please give us feedback{% endblock %}
+
+{% block content %}
+    <h1>Your Feedback</h1>
+    <p>
+        We are building PolicyInsights to improve local governments and
+    to help citizens to connect with various government programs.
+    </p>
+    <p>
+        We would greatly appreciate if you could help us by giving your feedback
+    about the service that we are building.
+    </p>
+    <p>
+        Feel free to let us know:
+    <ul>
+        <li>What could we improve in the current functionality?</li>
+        <li>What features could we add?</li>
+        <li>Any other requests.</li>
+    </ul>
+    </p>
+    <form action="" method="post">
+        {%  csrf_token %}
+        {{  form.as_p }}
+        <input type="submit" class="button" value="Save" />
+    </form>
+{% endblock %}

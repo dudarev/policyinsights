@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'locations.apps.LocationsConfig',
     'programs.apps.ProgramsConfig',
     'tags.apps.TagsConfig',
+    'feedback.apps.FeedbackConfig',
     'django.contrib.admin',
     'registration',
     'django_comments',
