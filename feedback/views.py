@@ -9,12 +9,11 @@ from .forms import FeedbackForm
 class FeedbackCreate(CreateView):
     model = Feedback
     form_class = FeedbackForm
-
-    def get_success_url(self):
-        return reverse('feedback-thanks')
+    success_url = reverse_lazy('feedback-thanks')
 
     def form_valid(self, form):
         feedback = form.save(commit=False)
         feedback.user = self.request.user
         feedback.save()
+        self.object = feedback
         return HttpResponseRedirect(self.get_success_url())
