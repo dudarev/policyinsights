@@ -37,8 +37,6 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + Users have a way to provide comments on data/programs/location they would like to see us add or other suggestions
 - + Users listed as feedback email receivers get emails with feedback
 
-- On the main page users can see a map so that they know the future is the entire US
-
 - Users can rate the importance of the program
 - Users can rate the program
 
@@ -46,6 +44,8 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - User may see comparison between localities with differences highlighted
 - Users can select program to compare
 - User may see comparison between programs with differences highlighted
+
+- On the main page users can see a map so that they know the future is the entire US
 
 - Pagination of locations on main page
 
