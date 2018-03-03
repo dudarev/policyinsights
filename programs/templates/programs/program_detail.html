@@ -2,6 +2,13 @@
 
 {% load comments %}
 {% load tags_filters %}
+{% load static %}
+{%  load ratings %}
+
+{% block scripts %}
+<link rel="stylesheet" href="{% static 'star-ratings/css/star-ratings.css' %}">
+<script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
+{% endblock %}
 
 {% block title %}PolicyInsights{% endblock %}
 
@@ -19,7 +26,20 @@
 
     <hr>
 
-    <h3>Comments</h3>
+    <h3>Ratings</h3>
+
+    <div class="row small-up-1 medium-up-2 large-up-2">
+        <div class="column rating">
+            <h4>Overall</h4>
+            {% ratings object 16 16 %}
+        </div>
+        <div class="column rating">
+            <h4>Importance for you</h4>
+            {% ratings importance 16 16 %}
+        </div>
+    </div>
+
+    <h3 style="margin-top: 1em;">Comments</h3>
     {% get_comment_list for object as comment_list %}
     {% for comment in comment_list %}
     <div>

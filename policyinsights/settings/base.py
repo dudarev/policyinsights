@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'programs.apps.ProgramsConfig',
     'tags.apps.TagsConfig',
     'feedback.apps.FeedbackConfig',
+    'star_ratings',
     'django.contrib.admin',
     'registration',
     'django_comments',

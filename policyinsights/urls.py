@@ -35,4 +35,5 @@ urlpatterns = [
     path('about/', flatpage_views.flatpage, {'url': '/about/'}, name='about'),
     path('accounts/', include('registration.backends.default.urls')),
     path('comments/', include('django_comments.urls')),
+    path('ratings/', include('star_ratings.urls', namespace='ratings')),
 ]

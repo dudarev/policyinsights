@@ -1,0 +1,15 @@
+{%  extends "star_ratings/widget_base.html" %}
+{%  load i18n %}
+
+{%  block rating_user %}
+{% if user.is_authenticated %}
+    <div class="star-ratings-rating-user">
+        {% if user_rating %}
+        {%  trans 'You Rated: ' %}
+        <span class='star-ratings-rating-value'>
+            {{  user_rating.score }}
+        </span>
+        {% endif %}
+    </div>
+{% endif %}
+{% endblock rating_user %}

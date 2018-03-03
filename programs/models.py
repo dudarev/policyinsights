@@ -1,3 +1,4 @@
+from annoying.fields import AutoOneToOneField
 from django.db import models
 
 
@@ -11,3 +12,8 @@ class Program(models.Model):
 
     def __str__(self):
         return '{} @ {}'.format(self.slug, self.location.slug)
+
+
+# this is hack so that a separate object could be passed to django-start-ratings
+class ProgramImportance(models.Model):
+    program = AutoOneToOneField(Program, primary_key=True, on_delete=models.CASCADE, related_name='importance')
