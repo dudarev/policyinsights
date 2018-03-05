@@ -1,5 +1,6 @@
 from annoying.fields import AutoOneToOneField
 from django.db import models
+from django.urls import reverse
 
 
 class Program(models.Model):
@@ -12,6 +13,9 @@ class Program(models.Model):
 
     def __str__(self):
         return '{} @ {}'.format(self.slug, self.location.slug)
+
+    def get_absolute_url(self):
+        return reverse('program-detail', args=[self.location.slug, self.slug])
 
 
 # this is hack so that a separate object could be passed to django-start-ratings
