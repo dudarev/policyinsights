@@ -37,11 +37,11 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + Users have a way to provide comments on data/programs/location they would like to see us add or other suggestions
 - + Users listed as feedback email receivers get emails with feedback
 
-- Users can rate the importance of the program
-- Users can rate the program
+- + Users can rate the importance of the program
+- + Users can rate the program
 
-- Users can select locality to compare
 - User may see comparison between localities with differences highlighted
+- Users can select locality to compare
 - Users can select program to compare
 - User may see comparison between programs with differences highlighted
 
