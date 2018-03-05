@@ -1,3 +1,5 @@
+from django.http import Http404
+from django.shortcuts import render
 from django.views.generic import DetailView, UpdateView, CreateView, ListView
 from django.urls import reverse
 
@@ -33,3 +35,12 @@ class LocationUpdate(LocationCreateUpdateMixin, UpdateView):
 
 class LocationsList(ListView):
     model = Location
+
+
+def compare(request, pk1, pk2):
+    try:
+        l1 = Location.objects.get(pk=pk1)
+        l2 = Location.objects.get(pk=pk2)
+    except Location.DoesNotExist:
+        raise Http404("Location does not exist")
+    return render(request, 'locations/compare.html', {'l1': l1, 'l2': l2})

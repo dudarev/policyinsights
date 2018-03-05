@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% load tags_filters %}
+
+{% block title %}PolicyInsights - Compare Locations{% endblock %}
+
+{% block content %}
+    <div class="row small-up-1 medium-up-2 large-up-2">
+        <div class="column rating">
+            {{ l1.content | add_tag_links | safe | linebreaksbr }}
+        </div>
+        <div class="column rating">
+            {{ l2.content | add_tag_links | safe | linebreaksbr }}
+        </div>
+    </div>
+{% endblock %}

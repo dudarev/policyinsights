@@ -40,10 +40,12 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + Users can rate the importance of the program
 - + Users can rate the program
 
-- User may see comparison between localities with differences highlighted
+- User may see comparison between localities
+- User may see differences in locations comparison highlighted
 - Users can select locality to compare
+- User may see comparison between programs
+- User may see differences in programs comparison highlighted
 - Users can select program to compare
-- User may see comparison between programs with differences highlighted
 
 - On the main page users can see a map so that they know the future is the entire US
 
