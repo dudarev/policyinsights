@@ -147,3 +147,5 @@ FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixtures'), ]
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "policyinsights/static/"),
 ]
+
+NUMBER_OF_RECENT = 5
