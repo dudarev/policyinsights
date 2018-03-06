@@ -1,10 +1,8 @@
 from django.conf import settings
-from django.http import Http404
-from django.shortcuts import render
 from django.views.generic import DetailView, UpdateView, CreateView, ListView
 from django.urls import reverse
 
-from policyinsights.views import CompareView
+from policyinsights.views import CompareView, CompareSelectView
 from .models import Location
 from .forms import LocationForm
 
@@ -44,21 +42,10 @@ class LocationsList(ListView):
     model = Location
 
 
-def compare_select(request, pk):
-    try:
-        l = Location.objects.get(pk=pk)
-    except Location.DoesNotExist:
-        raise Http404("Location does not exist")
-    recent_locations_ids = request.session.get('recent_locations', []),
-    recent_locations = Location.objects.filter(pk__in=recent_locations_ids[0])
-    return render(
-        request,
-        'locations/compare_select.html',
-        {
-            'l': l,
-            'recent_locations': recent_locations,
-        }
-    )
+class LocationCompareSelect(CompareSelectView):
+    model = Location
+    template = 'locations/compare_select.html',
+    recent_objects_str = 'recent_locations'
 
 
 class LocationsCompare(CompareView):

@@ -18,7 +18,8 @@
         {{ object.content | add_tag_links | safe | linebreaksbr }}
     </div>
     <div style="margin-top: 1em">
-    <a href="{% url 'program-update' object.location.slug object.slug %}">Update</a>
+    <a href="{% url 'program-update' object.location.slug object.slug %}">Update</a> |
+    <a href="{% url 'program-compare-select' object.id %}">Compare</a>
     </div>
     <div style="margin-top: 1em">
        Location: <a href="{% url 'location-detail' object.location.slug %}">{{ object.location.slug }}</a>

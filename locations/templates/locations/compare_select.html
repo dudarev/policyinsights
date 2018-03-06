@@ -4,13 +4,13 @@
 
 {% block content %}
     <div class="content">
-    Compare <a href="{% url 'location-detail' l.slug %}">{{ l.slug }}</a> with recently visited locations:
+    Compare <a href="{% url 'location-detail' object.slug %}">{{ object.slug }}</a> with recently visited locations:
         <br>
         <br>
         <ul>
-            {% for l2 in recent_locations %}
+            {% for l2 in recent_objects %}
             <li>
-                <a href="{% url 'location-compare' l.pk l2.pk %}">{{ l2.slug }}</a>
+                <a href="{% url 'location-compare' object.pk l2.pk %}">{{ l2.slug }}</a>
             </li>
             {% endfor %}
         </ul>

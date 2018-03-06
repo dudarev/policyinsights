@@ -3,6 +3,28 @@ from django.shortcuts import render
 from django.views import View
 
 
+class CompareSelectView(View):
+    model = None
+    template = None
+    recent_objects_str = ''
+
+    def get(self, request, **kwargs):
+        try:
+            object = self.model.objects.get(pk=kwargs['pk'])
+        except self.model.DoesNotExist:
+            raise Http404("Object does not exist")
+        recent_objects_ids = request.session.get(self.recent_objects_str, []),
+        recent_objects = self.model.objects.filter(pk__in=recent_objects_ids[0])
+        return render(
+            request,
+            self.template,
+            {
+                'object': object,
+                'recent_objects': recent_objects,
+            }
+        )
+
+
 class CompareView(View):
     model = None
     template = None

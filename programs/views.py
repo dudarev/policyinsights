@@ -1,9 +1,10 @@
+from django.conf import settings
 from django.http import Http404
 from django.views.generic import DetailView, UpdateView, CreateView
 from django.urls import reverse
 from django.utils.translation import gettext as _
 
-from policyinsights.views import CompareView
+from policyinsights.views import CompareView, CompareSelectView
 from .models import Program
 from .forms import ProgramCreateForm, ProgramUpdateForm
 
@@ -34,10 +35,15 @@ class ProgramDetail(GetProgramMixin, DetailView):
     model = Program
 
     def get_context_data(self, **kwargs):
-       context = {
-           'importance': self.object.importance
-       }
-       return super().get_context_data(**context)
+        recent_programs = self.request.session.get('recent_programs', [])
+        if not self.object.pk in recent_programs:
+            recent_programs = [self.object.pk, ] + recent_programs
+            recent_programs = recent_programs[:settings.NUMBER_OF_RECENT]
+        self.request.session['recent_programs'] = recent_programs
+        context = {
+            'importance': self.object.importance
+        }
+        return super().get_context_data(**context)
 
 
 class ProgramUpdate(GetProgramMixin, UpdateView):
@@ -47,6 +53,12 @@ class ProgramUpdate(GetProgramMixin, UpdateView):
 
     def get_success_url(self):
         return reverse('program-detail', args=[self.object.location.slug, self.object.slug])
+
+
+class ProgramCompareSelect(CompareSelectView):
+    model = Program
+    template = 'programs/compare_select.html',
+    recent_objects_str = 'recent_programs'
 
 
 class ProgramsCompare(CompareView):
