@@ -148,4 +148,4 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "policyinsights/static/"),
 ]
 
-NUMBER_OF_RECENT = 5
+NUMBER_OF_RECENT = 10
