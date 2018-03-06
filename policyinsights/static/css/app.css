@@ -5,3 +5,11 @@
 #id_honeypot {
     display: none;
 }
+
+.larger {
+    background-color: palegreen;
+}
+
+.smaller {
+    background-color: #db709380;
+}

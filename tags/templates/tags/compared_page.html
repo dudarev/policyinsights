@@ -1,0 +1,10 @@
+{% load tags_filters %}
+
+{{ content | add_tag_links | safe | linebreaksbr }}
+
+<br>
+<br>
+{% for parameter in parameters %}
+    {{ parameter | safe }}<br>
+{% endfor %}
+
