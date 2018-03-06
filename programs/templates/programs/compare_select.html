@@ -8,9 +8,9 @@
         <br>
         <br>
         <ul>
-            {% for l2 in recent_objects %}
+            {% for p2 in recent_objects %}
             <li>
-                <a href="{% url 'program-compare' object.pk l2.pk %}">{{ l2.slug }}</a>
+                <a href="{% url 'program-compare' object.pk p2.pk %}">{{ p2.slug }}</a> @ {{ p2.location.slug }}
             </li>
             {% endfor %}
         </ul>
