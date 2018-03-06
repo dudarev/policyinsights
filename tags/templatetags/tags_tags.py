@@ -55,8 +55,9 @@ def _get_parameters(content):
     return res
 
 
+# TODO: remove style argumet (it is just to choose which highligting is better)
 @register.inclusion_tag('tags/compared_page.html')
-def render_compared(page1, page2):
+def render_compared(page1, page2, style=1):
     content_without_parameters = _strip_parameters(page1.content)
     page1_parameters = _get_parameters(page1.content)
     page2_parameters = _get_parameters(page2.content)
@@ -66,10 +67,16 @@ def render_compared(page1, page2):
             value1 = float(NON_DECIMAL.sub('', page1_parameters[p]))
             value2 = float(NON_DECIMAL.sub('', page2_parameters[p]))
             if value1 > value2:
-                compared_parameters.append('{}: <span class="larger">{}</span>'.format(p, page1_parameters[p]))
+                if style == 1:
+                    compared_parameters.append('{}: <span class="larger">{}</span>'.format(p, page1_parameters[p]))
+                else:
+                    compared_parameters.append('{}: <span class="larger2">{}</span>'.format(p, page1_parameters[p]))
                 continue
             else:
-                compared_parameters.append('{}: <span class="smaller">{}</span>'.format(p, page1_parameters[p]))
+                if style == 1:
+                    compared_parameters.append('{}: <span class="smaller">{}</span>'.format(p, page1_parameters[p]))
+                else:
+                    compared_parameters.append('{}: <span class="smaller2">{}</span>'.format(p, page1_parameters[p]))
                 continue
         compared_parameters.append('{}: {}'.format(p, page1_parameters[p]))
     return {

@@ -44,7 +44,7 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + Users can select locality to compare
 - User may see comparison between programs
 - Users can select program to compare
-- User may see differences in locations comparison highlighted
+- + User may see differences in locations comparison highlighted
 - User may see differences in programs comparison highlighted
 
 - On the main page users can see a map so that they know the future is the entire US

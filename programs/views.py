@@ -3,6 +3,7 @@ from django.views.generic import DetailView, UpdateView, CreateView
 from django.urls import reverse
 from django.utils.translation import gettext as _
 
+from policyinsights.views import CompareView
 from .models import Program
 from .forms import ProgramCreateForm, ProgramUpdateForm
 
@@ -46,3 +47,8 @@ class ProgramUpdate(GetProgramMixin, UpdateView):
 
     def get_success_url(self):
         return reverse('program-detail', args=[self.object.location.slug, self.object.slug])
+
+
+class ProgramsCompare(CompareView):
+    model = Program
+    template = 'programs/compare.html'

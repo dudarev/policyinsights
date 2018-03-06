@@ -13,3 +13,11 @@
 .smaller {
     background-color: #db709380;
 }
+
+.larger2 {
+    font-weight: bold;
+}
+
+.smaller2 {
+    font-style: italic;
+}

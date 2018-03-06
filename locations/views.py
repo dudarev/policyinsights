@@ -4,6 +4,7 @@ from django.shortcuts import render
 from django.views.generic import DetailView, UpdateView, CreateView, ListView
 from django.urls import reverse
 
+from policyinsights.views import CompareView
 from .models import Location
 from .forms import LocationForm
 
@@ -60,10 +61,6 @@ def compare_select(request, pk):
     )
 
 
-def compare(request, pk1, pk2):
-    try:
-        l1 = Location.objects.get(pk=pk1)
-        l2 = Location.objects.get(pk=pk2)
-    except Location.DoesNotExist:
-        raise Http404("Location does not exist")
-    return render(request, 'locations/compare.html', {'l1': l1, 'l2': l2})
+class LocationsCompare(CompareView):
+    model = Location
+    template = 'locations/compare.html'
