@@ -7,17 +7,19 @@
 }
 
 .larger {
-    background-color: palegreen;
+    background-color: #f4c9a0;
 }
 
 .smaller {
-    background-color: #db709380;
+    background-color: #a0cbf4;
 }
 
 .larger2 {
     font-weight: bold;
+    background-color: #e6e6e6;
 }
 
 .smaller2 {
     font-style: italic;
+    background-color: #e6e6e6;
 }
