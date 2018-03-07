@@ -42,12 +42,15 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 
 - + User may see comparison between localities
 - + Users can select locality to compare
-- User may see comparison between programs
-- Users can select program to compare
+- + User may see comparison between programs
+- + Users can select program to compare
 - + User may see differences in locations comparison highlighted
-- User may see differences in programs comparison highlighted
+- + User may see differences in programs comparison highlighted
 
-- On the main page users can see a map so that they know the future is the entire US
+- -> On the main page users can see a map so that they know the future is the entire US
+
+- Only admins may edit location pages
+- Location data can be imported by admin from  https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml
 
 - Pagination of locations on main page
 
@@ -59,9 +62,6 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - User may edit her name in user profile
 
 - Markdown may be used in wiki pages
-
-- Only admins may edit location pages
-- Location data can be imported by admin from  https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml
 
 - Link for admins in About page to edit content
 
