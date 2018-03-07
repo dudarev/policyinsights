@@ -1,0 +1,12 @@
+{% load tags_filters %}
+
+<div class="column">
+    {% for parameter in parameters_1 %}
+        {{ parameter | safe }}<br>
+    {% endfor %}
+</div>
+<div class="column">
+    {% for parameter in parameters_2 %}
+        {{ parameter | safe }}<br>
+    {% endfor %}
+</div>

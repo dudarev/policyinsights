@@ -1,13 +1,11 @@
-from django import template
-
-register = template.Library()
-
 import re
 
 from django import template
 from django.urls import reverse
 
+
 register = template.Library()
+
 
 RE_FOR_TAGS_TO_COMPARE = r'.*(median_|_per_capita|_percent)'
 NON_DECIMAL = re.compile(r'[^\d.]+')
@@ -55,31 +53,45 @@ def _get_parameters(content):
     return res
 
 
-# TODO: remove style argumet (it is just to choose which highligting is better)
-@register.inclusion_tag('tags/compared_page.html')
-def render_compared(page1, page2, style=1):
-    content_without_parameters = _strip_parameters(page1.content)
-    page1_parameters = _get_parameters(page1.content)
-    page2_parameters = _get_parameters(page2.content)
+@register.inclusion_tag('tags/compared_content.html')
+def render_compared_content(page1, page2):
+    content_1 = _strip_parameters(page1.content)
+    content_2 = _strip_parameters(page2.content)
+    return {
+        'content_1': content_1,
+        'content_2': content_2,
+    }
+
+
+def _get_compared_parameters(parameters_1, parameters_2, style=1):
     compared_parameters = []
-    for p in page1_parameters:
-        if p in page2_parameters and re.match(RE_FOR_TAGS_TO_COMPARE, p):
-            value1 = float(NON_DECIMAL.sub('', page1_parameters[p]))
-            value2 = float(NON_DECIMAL.sub('', page2_parameters[p]))
+    for p in parameters_1:
+        if p in parameters_2 and re.match(RE_FOR_TAGS_TO_COMPARE, p):
+            value1 = float(NON_DECIMAL.sub('', parameters_1[p]))
+            value2 = float(NON_DECIMAL.sub('', parameters_2[p]))
             if value1 > value2:
                 if style == 1:
-                    compared_parameters.append('{}: <span class="larger">{}</span>'.format(p, page1_parameters[p]))
+                    compared_parameters.append('{}: <span class="larger">{}</span>'.format(p, parameters_1[p]))
                 else:
-                    compared_parameters.append('{}: <span class="larger2">{}</span>'.format(p, page1_parameters[p]))
+                    compared_parameters.append('{}: <span class="larger2">{}</span>'.format(p, parameters_1[p]))
                 continue
             else:
                 if style == 1:
-                    compared_parameters.append('{}: <span class="smaller">{}</span>'.format(p, page1_parameters[p]))
+                    compared_parameters.append('{}: <span class="smaller">{}</span>'.format(p, parameters_1[p]))
                 else:
-                    compared_parameters.append('{}: <span class="smaller2">{}</span>'.format(p, page1_parameters[p]))
+                    compared_parameters.append('{}: <span class="smaller2">{}</span>'.format(p, parameters_1[p]))
                 continue
-        compared_parameters.append('{}: {}'.format(p, page1_parameters[p]))
+        compared_parameters.append('{}: {}'.format(p, parameters_1[p]))
+    return compared_parameters
+
+
+@register.inclusion_tag('tags/compared_parameters.html')
+def render_compared_parameters(page1, page2, style=1):
+    parameters_1 = _get_parameters(page1.content)
+    parameters_2 = _get_parameters(page2.content)
+    compared_parameters_1 = _get_compared_parameters(parameters_1, parameters_2, style)
+    compared_parameters_2 = _get_compared_parameters(parameters_2, parameters_1, style)
     return {
-        'content': content_without_parameters,
-        'parameters': compared_parameters,
+        'parameters_1': compared_parameters_1,
+        'parameters_2': compared_parameters_2,
     }

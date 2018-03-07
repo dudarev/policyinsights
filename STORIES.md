@@ -76,3 +76,4 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - Pagination of programs on location page
 - Pagination for search of programs on tag page
 - Do not send email about feedback if last email about feedback was sent less than 1 hour ago
+- Search box in programs to compare.
