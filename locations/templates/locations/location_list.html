@@ -1,8 +1,11 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}PolicyInsights{% endblock %}
 
 {% block content %}
+    <img src="{% static 'img/choropleth.svg' %}" alt="Map of United States with current counties highlighted">
     <h1>Locations</h1>
     <div>
         <ul>
