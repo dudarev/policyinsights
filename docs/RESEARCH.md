@@ -72,3 +72,18 @@ https://en.wikipedia.org/wiki/Template:Infobox_book
 ## Tags in OpenStreetMap
 
 https://wiki.openstreetmap.org/wiki/Tags
+
+
+## Map visualization options
+
+### D3
+
+- [Choropleth maps with D3, Python, and data from FRED](http://www.rubenhm.org/blog/2016/07/06/choropleth-maps-with-d3-python-and-data-from-fred/)
+- [U.S. Counties TopoJSON](https://bl.ocks.org/mbostock/4122298)
+- [Town/county map using d3 and TopoJSON](https://bl.ocks.org/mbostock/4122298) code used in [Live Results: Massachusetts Senate Special Election](http://elections.huffingtonpost.com/2013/massachusetts-senate-results)
+- [Choropleth map of unemployment](https://bl.ocks.org/mbostock/4060606)
+- [Mapping with D3](http://eyeseast.github.io/visible-data/2012/12/14/mapping-with-d3/)
+
+### plot.ly
+
+- [Choropleth Maps](https://plot.ly/python/choropleth-maps/)
