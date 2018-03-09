@@ -47,7 +47,7 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + User may see differences in locations comparison highlighted
 - + User may see differences in programs comparison highlighted
 
-- -> On the main page users can see a map so that they know the future is the entire US
+- + On the main page users can see a map so that they know the future is the entire US
 
 - Only admins may edit location pages
 - Location data can be imported by admin from  https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml
@@ -78,3 +78,4 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - Do not send email about feedback if last email about feedback was sent less than 1 hour ago
 - Search box in programs to compare
 - User may compare more than 2 programs
+- As a user, I want to be able to see the applicable year for each numeric data element. For example, for the education program, I have HS_graduation_rate, but I need to specify the year without putting it in the data element name
