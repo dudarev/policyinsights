@@ -23,3 +23,7 @@
     font-style: italic;
     background-color: #e6e6e6;
 }
+
+li.topbar-title a {
+    padding: 0;
+}
