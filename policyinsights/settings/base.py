@@ -37,6 +37,7 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'profiles.apps.ProfilesConfig',
     'locations.apps.LocationsConfig',
     'programs.apps.ProgramsConfig',
     'tags.apps.TagsConfig',
@@ -141,6 +142,7 @@ LOGOUT_REDIRECT_URL = 'home'
 # http://django-registration-redux.readthedocs.io/en/latest/quickstart.html
 ACCOUNT_ACTIVATION_DAYS = 7  # one-week activation window
 REGISTRATION_AUTO_LOGIN = True  # automatically log the user in
+REGISTRATION_FORM = 'profiles.forms.CustomRegistrationForm'
 
 FIXTURE_DIRS = [os.path.join(BASE_DIR, 'fixtures'), ]
 
