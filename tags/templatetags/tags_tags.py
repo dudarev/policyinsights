@@ -7,7 +7,7 @@ from django.urls import reverse
 register = template.Library()
 
 
-RE_FOR_TAGS_TO_COMPARE = r'.*(median_|_per_capita|_percent)'
+RE_FOR_TAGS_TO_COMPARE = r'.*(median_|_capita|_percent)'
 NON_DECIMAL = re.compile(r'[^\d.]+')
 
 
