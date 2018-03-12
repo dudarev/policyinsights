@@ -21,6 +21,7 @@ class CompareSelectView(View):
             {
                 'object': object,
                 'recent_objects': recent_objects,
+                'all_objects': self.model.objects.all(),
             }
         )
 

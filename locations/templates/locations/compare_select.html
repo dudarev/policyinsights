@@ -4,14 +4,26 @@
 
 {% block content %}
     <div class="content">
-    Compare <a href="{% url 'location-detail' object.slug %}">{{ object.slug }}</a> with recently visited locations:
-        <br>
+        Compare <a href="{% url 'location-detail' object.slug %}">{{ object.slug }}</a> with recently visited locations:
         <br>
         <ul>
             {% for l2 in recent_objects %}
-            <li>
-                <a href="{% url 'location-compare' object.pk l2.pk %}">{{ l2.slug }}</a>
-            </li>
+                {% ifnotequal l2 object %}
+                    <li>
+                        <a href="{% url 'location-compare' object.pk l2.pk %}">{{ l2.slug }}</a>
+                    </li>
+                {% endifnotequal %}
+            {% endfor %}
+        </ul>
+        or all the locations
+        <br>
+        <ul>
+            {% for l2 in all_objects %}
+                {% ifnotequal l2 object %}
+                    <li>
+                        <a href="{% url 'location-compare' object.pk l2.pk %}">{{ l2.slug }}</a>
+                    </li>
+                {% endifnotequal %}
             {% endfor %}
         </ul>
     </div>

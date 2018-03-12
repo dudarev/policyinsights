@@ -6,12 +6,24 @@
     <div class="content">
     Compare <a href="{% url 'program-detail' object.location.slug object.slug %}">{{ object.slug }}</a> with recently visited programs:
         <br>
-        <br>
         <ul>
             {% for p2 in recent_objects %}
+            {% ifnotequal p2 object %}
             <li>
                 <a href="{% url 'program-compare' object.pk p2.pk %}">{{ p2.slug }}</a> @ {{ p2.location.slug }}
             </li>
+            {% endifnotequal %}
+            {% endfor %}
+        </ul>
+    or all the programs
+        <br>
+        <ul>
+            {% for p2 in all_objects %}
+            {% ifnotequal p2 object %}
+                <li>
+                    <a href="{% url 'program-compare' object.pk p2.pk %}">{{ p2.slug }}</a> @ {{ p2.location.slug }}
+                </li>
+            {% endifnotequal %}
             {% endfor %}
         </ul>
     </div>
