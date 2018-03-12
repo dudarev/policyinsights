@@ -10,12 +10,12 @@
 <script type="text/javascript" src="{% static 'star-ratings/js/dist/star-ratings.min.js' %}"></script>
 {% endblock %}
 
-{% block title %}PolicyInsights{% endblock %}
+{% block title %}PolicyInsights - Program{% endblock %}
 
 {% block content %}
     <div id="content">
         <!-- TODO: make sure content is safe -->
-        {{ object.content | add_tag_links | safe | linebreaksbr }}
+        {{ object.content | urlize |  add_tag_links | safe | linebreaksbr }}
     </div>
     <div style="margin-top: 1em">
     <a href="{% url 'program-update' object.location.slug object.slug %}">Update</a> |

@@ -10,7 +10,7 @@ def _add_tag_links_to_line(line):
     matching_object = re.match(r'(\w+):', line)
     if matching_object:
         tag_slug = matching_object.groups()[0]
-        value = line.rsplit(':')[1]
+        value = line.split(':', 1)[1]
         link = reverse('tag-detail', args=[tag_slug])
         return '<a href="{}">{}</a>: {}'.format(link, tag_slug, value)
     return line

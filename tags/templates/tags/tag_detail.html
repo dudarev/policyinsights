@@ -2,12 +2,12 @@
 
 {% load tags_filters %}
 
-{% block title %}PolicyInsights - Edit Tag{% endblock %}
+{% block title %}PolicyInsights - Tag{% endblock %}
 
 {% block content %}
     <div id="content">
         <!-- TODO: make sure content is safe -->
-        {{ object.content | add_tag_links | safe | linebreaksbr }}
+        {{ object.content | urlize |  add_tag_links | safe | linebreaksbr }}
     </div>
     <div id="update" style="margin-top: 1em;">
         <a href="{% url 'tag-update' object.slug %}">Update</a>

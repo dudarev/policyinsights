@@ -14,6 +14,11 @@ class TestTemplateTags(TestCase):
         tags_content = "Some content: without tags, does not get\ntags\nsome_tag: some content"
         self.assertIn('href', add_tag_links(tags_content))
 
+    def test_tag_with_url(self):
+        tags_content = "property: http://example.com"
+        res = add_tag_links(tags_content)
+        self.assertIn('example', add_tag_links(tags_content))
+
 
 class TestExtractTags(TestCase):
     def test_extract_tags(self):
