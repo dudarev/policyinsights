@@ -4,23 +4,24 @@
 
 {% block content %}
     <h1>Your Feedback</h1>
+
     <p>
-        We are building PolicyInsights to improve local governments and
-    to help citizens to connect with various government programs.
+        We are committed to building a product users LOVE.
+        We want to build a product to help citizens and local governments work together to get to better outcomes.
+        Your feedback is very important to us as we embark on this civic journey together!
     </p>
+
     <p>
-        We would greatly appreciate if you could help us by giving your feedback
-    about the service that we are building.
+        Please provide your feedback below and here are some questions to get you started:
     </p>
-    <p>
-        Feel free to let us know:
+
     <ul>
         <li>What could we improve in the current functionality?</li>
         <li>What features could we add?</li>
         <li>What locality would you like us to prioritize next?</li>
         <li>Any other requests.</li>
     </ul>
-    </p>
+
     <form action="" method="post">
         {%  csrf_token %}
         {{  form.as_p }}
