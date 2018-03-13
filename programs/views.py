@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import Http404
 from django.views.generic import DetailView, UpdateView, CreateView
 from django.urls import reverse
@@ -9,7 +10,7 @@ from .models import Program
 from .forms import ProgramCreateForm, ProgramUpdateForm
 
 
-class ProgramCreate(CreateView):
+class ProgramCreate(LoginRequiredMixin, CreateView):
 
     model = Program
     form_class = ProgramCreateForm
@@ -46,7 +47,7 @@ class ProgramDetail(GetProgramMixin, DetailView):
         return super().get_context_data(**context)
 
 
-class ProgramUpdate(GetProgramMixin, UpdateView):
+class ProgramUpdate(LoginRequiredMixin, GetProgramMixin, UpdateView):
 
     model = Program
     form_class = ProgramUpdateForm

@@ -1,4 +1,5 @@
 from django.conf import settings
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import DetailView, UpdateView, CreateView, ListView
 from django.urls import reverse
 
@@ -15,7 +16,7 @@ class LocationCreateUpdateMixin():
         return reverse('location-detail', args=[self.object.slug])
 
 
-class LocationCreate(LocationCreateUpdateMixin, CreateView):
+class LocationCreate(LoginRequiredMixin, LocationCreateUpdateMixin, CreateView):
     pass
 
 
@@ -34,7 +35,7 @@ class LocationDetail(DetailView):
         return context
 
 
-class LocationUpdate(LocationCreateUpdateMixin, UpdateView):
+class LocationUpdate(LoginRequiredMixin, LocationCreateUpdateMixin, UpdateView):
     pass
 
 

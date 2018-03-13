@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import redirect
 from django.views.generic import DetailView, UpdateView, CreateView, ListView
 from django.urls import reverse
@@ -15,7 +16,7 @@ class TagCreateUpdateMixin():
         return reverse('tag-detail', args=[self.object.slug])
 
 
-class TagCreate(TagCreateUpdateMixin, CreateView):
+class TagCreate(LoginRequiredMixin, TagCreateUpdateMixin, CreateView):
     def get_initial(self):
         return {'slug': self.request.GET.get('slug', '')}
 
@@ -32,5 +33,5 @@ class TagDetail(DetailView):
         return self.render_to_response(context)
 
 
-class TagUpdate(TagCreateUpdateMixin, UpdateView):
+class TagUpdate(LoginRequiredMixin, TagCreateUpdateMixin, UpdateView):
     pass
