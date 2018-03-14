@@ -1,25 +1,16 @@
-## Relevant to us
+## Relevant to us now
 
-From job posting below I've selected some requirements relevant to us:
+Based on job descriptions below I composed the following list of qualifications that would be nice to have:
 
-- Experience working in remote and distributed teams
-
-- An online or PDF portfolio, presenting case studies of your work, demonstrating experience creating great user-centered design solutions across desktop and mobile devices (flows, prototypes, wireframes) AND solid visual designs (mockups and style guides).
-- Fluency in best practices for mobile and web-based information architecture and design, as well as strong knowledge of usability principles and techniques.
-- Proficiency in UX design and prototyping tools.
-- Excellent communication, presentation, interpersonal and analytical skills.
-
-- Proficiency with web and accessibility standards.
-- Familiarity with front-end code and concepts, such as HTML, CSS, JavaScript, React/Angular, and responsive design
-
-- Background in content publishing
-- Experience acting as researcher, both in-person and with remote participants
-- Have familiarity with Free and Open Source communities
-
-- A team player. You seek proactively constructive feedback from others and provide it yourself. You aren’t afraid to let others iterate on your work.
-- An experienced UX designer capable of solving user and business needs via generative research, user testing, through information architecture and interaction design
-- Experienced working in agile product development teams (product, design and engineering)
+- Proficiency in UX design and prototyping tools 
 - Experienced working with web or mobile based technologies such as HTML, CSS, JavaScript, etc.
+- Strong knowledge of usability principles and techniques
+- An online or PDF portfolio, presenting case studies of your work
+- Experience working in remote and distributed teams
+- Fluency in best practices for mobile and web-based information architecture and design
+- Background in content publishing
+- Have familiarity with Free and Open Source communities
+- A team player who seeks proactively constructive feedback from others and provide it to others
 
 ## Amazon IMDB
 
