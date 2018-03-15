@@ -49,20 +49,17 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 
 - + On the main page users can see a map so that they know the future is the entire US
 
-- Location data can be imported by admin from  https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml
+- User has reset password link beneath username and password fields in your account login page
 
-- Pagination of locations on main page
+- Markdown may be used in wiki pages
 
 - User may follow a program
 - There is a limit on how many programs a user may follow
 - User may stop following a program
 - User gets emails about updates to the programs she follows on daily bases (number of comments, number of updates etc.)
 
-- User may edit her name in user profile
-
-- Markdown may be used in wiki pages
-
-- Link for admins in About page to edit content
+- Location data can be imported by admin from  https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml
+- Pagination of locations on main page
 
 
 # 0.2 and later
@@ -79,3 +76,4 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - User may compare more than 2 programs
 - As a user, I want to be able to see the applicable year for each numeric data element. For example, for the education program, I have HS_graduation_rate, but I need to specify the year without putting it in the data element name
 - Only admins may edit location pages
+- User may edit her name in user profile
