@@ -49,7 +49,7 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 
 - + On the main page users can see a map so that they know the future is the entire US
 
-- User has reset password link beneath username and password fields in your account login page
+- + User has reset password link beneath username and password fields in account login page
 
 - Search box in programs to compare
 
