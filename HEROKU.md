@@ -1,5 +1,11 @@
 # Heroku settings
 
+## Get config
+
+```
+heroku config --remote=...
+```
+
 ## Pointing to settings file
 ```
 heroku config:set DJANGO_SETTINGS_MODULE=policyinsights.settings.heroku
