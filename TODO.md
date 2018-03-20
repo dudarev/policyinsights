@@ -1,4 +1,6 @@
-## Optimize connections to Postgres
+# TODO
+
+## Enable Cloudflare caching
 
 https://medium.com/@bfirsh/squeezing-every-drop-of-performance-out-of-a-django-app-on-heroku-4b5b1e5a3d44
 
@@ -12,3 +14,11 @@ Parameter is may be more clear for general public.
 If we use parameter, we could not use short form /p/ since it's taken by program.
 
 ## Make comparison look good on mobile
+
+----
+
+# DONE
+
+## Optimize connections to Postgres
+
+https://medium.com/@bfirsh/squeezing-every-drop-of-performance-out-of-a-django-app-on-heroku-4b5b1e5a3d44
