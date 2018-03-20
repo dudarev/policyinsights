@@ -10,7 +10,7 @@
         {{ object.content | urlize |  add_tag_links | safe | linebreaksbr }}
     </div>
     <div id="update" style="margin-top: 1em;">
-        <a href="{% url 'tag-update' object.slug %}">Update</a>
+        <a href="{% url 'tag-update' object.slug %}" class="button">Update</a>
     </div>
     <div style="margin-top: 1em;">
         <hr>

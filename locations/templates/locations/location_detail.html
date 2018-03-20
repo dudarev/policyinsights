@@ -10,8 +10,8 @@
         {{ object.content | urlize |  add_tag_links | safe | linebreaksbr }}
     </div>
     <div id="update" style="margin-top: 1em;">
-        <a href="{% url 'location-update' object.slug %}">Update</a> |
-        <a href="{% url 'location-compare-select' object.id %}">Compare</a>
+        <a href="{% url 'location-update' object.slug %}" class="button">Update</a>
+        <a href="{% url 'location-compare-select' object.id %}" class="button">Compare</a>
     </div>
     <div style="margin-top: 1em;">
         <hr>
