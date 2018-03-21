@@ -15,6 +15,11 @@ If we use parameter, we could not use short form /p/ since it's taken by program
 
 ## Make comparison look good on mobile
 
+## Put sparkline bars next to compared properties
+
+https://omnipotent.net/jquery.sparkline/#s-about
+https://pypi.python.org/pypi/django-sparklines/0.1
+
 ----
 
 # DONE
