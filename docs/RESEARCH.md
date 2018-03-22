@@ -87,3 +87,28 @@ https://wiki.openstreetmap.org/wiki/Tags
 ### plot.ly
 
 - [Choropleth Maps](https://plot.ly/python/choropleth-maps/)
+
+
+## Populating fields from Census data
+
+The most extensive population data may be found in dataset
+
+Profile of General Population and Housing Characteristics: 2010
+
+https://factfinder.census.gov/faces/tableservices/jsf/pages/productview.xhtml?pid=DEC_10_DP_DPDP1&src=pt
+
+Datasets with estimates from later years do not have data for all counties.
+
+A way to get quickfacts from Census:
+
+https://www.census.gov/quickfacts/fact/table/austincitytexas,fairfaxcountyvirginia,US/PST045217
+
+Information about FIPS: https://wiki.openstreetmap.org/wiki/FIPS
+
+Dataset to get population with disabilities: ACS_09_1YR_S1703. Latest year of these datasets is 2009.
+
+Good tool to get unicode slugs: https://github.com/mozilla/unicode-slugify. Install it from Github:
+
+```
+pip install git+https://github.com/mozilla/unicode-slugify
+```
