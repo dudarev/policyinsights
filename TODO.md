@@ -20,6 +20,20 @@ If we use parameter, we could not use short form /p/ since it's taken by program
 https://omnipotent.net/jquery.sparkline/#s-about
 https://pypi.python.org/pypi/django-sparklines/0.1
 
+## Reddit AMA feature
+
+Reddit has a subreddit for AMA (ask me anything) where users may vote on question to some well-known people.
+
+For example, Bill Gates AMA:
+https://www.reddit.com/r/IAmA/comments/80ow6w/im_bill_gates_cochair_of_the_bill_melinda_gates/
+
+## Reddit news and links submission
+
+In the spirit of Reddit (https://www.reddit.com/ https://en.wikipedia.org/wiki/Reddit)
+we may implement links submission for every program.
+
+This way users who follow relevant for them programs would have feeds of links related to those programs.
+
 ----
 
 # DONE
