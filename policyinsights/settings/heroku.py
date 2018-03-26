@@ -15,7 +15,7 @@ DATABASES['default'].update({
         'ATOMIC_REQUESTS': False,
         'CONN_MAX_AGE': 0,
         'OPTIONS': {
-            'MAX_CONNS': 4,  # 3 workers, 4 connections each, leaving 8 connections out of 20 for one-off tasks
+            'MAX_CONNS': 3,  # 3 workers, 3 connections each, leaving 11 connections out of 20 for one-off tasks
     }})
 
 # Simplified static file serving.
