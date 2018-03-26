@@ -39,3 +39,10 @@ heroku pg:reset DATABASE_URL
 ## Database backups
 
 https://devcenter.heroku.com/articles/heroku-postgres-backups
+
+## List and kill Postgres processes on Heroku
+
+```
+heroku pg:ps --remote=production
+heroku pg:killall --remote=production
+```
