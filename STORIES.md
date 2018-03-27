@@ -55,13 +55,12 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 
 - Location data can be imported by admin from  https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml (see Trello)
 
-- Markdown may be used in wiki pages
-
 - User may follow a program
 - There is a limit on how many programs a user may follow
 - User may stop following a program
 - User gets emails about updates to the programs she follows on daily bases (number of comments, number of updates etc.)
 
+- Markdown may be used in wiki pages
 
 - Pagination of locations on main page
 
