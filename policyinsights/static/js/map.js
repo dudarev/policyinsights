@@ -19,9 +19,9 @@ info.onAdd = function (map) {
 };
 
 info.update = function (props) {
-    this._div.innerHTML = '<h4>Sustainability Score</h4>' +  (props ?
-		'<b>' + props.name + '</b><br />' + props.score 
-		: 'Hover over a location');
+    this._div.innerHTML = '<h4>Total Spending per Capita</h4>' +  (props ?
+		'<b>' + props.name + '</b><br />' + props.spending_per_capita
+		: 'Hover over a location<br/>&nbsp;');
 };
 
 info.addTo(map);
@@ -33,14 +33,14 @@ var legend = L.control({position: 'bottomright'});
 legend.onAdd = function (map) {
 
     var div = L.DomUtil.create('div', 'info legend'),
-		grades = [80, 60, 40, 20, 0],
+		grades = [20000, 15000, 10000, 5000, 0],
 		labels = [];
 
     // loop through our density intervals and generate a label with a colored square for each interval
-    for (var i = 0; i < grades.length; i++) {
+    for (var i = 1; i < grades.length; i++) {
 		div.innerHTML +=
 			'<i style="background:' + getColor(grades[i]) + '"></i> ' +
-			grades[i] + '<br/>';
+            '$' + grades[i] + ' - $' + grades[i-1] + '  <br/>';
     }
 
 	return div;
@@ -54,16 +54,16 @@ var geojsonLayer = new L.GeoJSON.AJAX("/static/data/locations.geojson", {style: 
 geojsonLayer.addTo(map);
 
 function getColor(score) {
-    return score >= 80 ? '#a63603' :
-           score >= 60 ? '#e6550d' :
-           score >= 40 ? '#fd8d3c' :
-           score >= 20 ? '#fdbe85' :
+    return score >= 15000 ? '#a63603' :
+           score >= 10000 ? '#e6550d' :
+           score >= 5000 ? '#fd8d3c' :
+           score >= 0 ? '#fdbe85' :
                          '#feedde';
 }
 
 function style(feature) {
     return {
-		fillColor: getColor(feature.properties.score),
+		fillColor: getColor(feature.properties.spending_per_capita),
 		weight: 2,
 		opacity: 1,
 		color: 'white',

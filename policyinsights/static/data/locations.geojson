@@ -1276,7 +1276,8 @@
       "properties": {
         "name": "New York City",
         "score": 30,
-        "slug": "New_York_NY"
+        "slug": "New_York_NY",
+        "spending_per_capita": 10333
       }
     },
     {
@@ -1861,6 +1862,7 @@
         "CENSUSAREA": 61.048,
         "score": 85,
         "slug": "Washington_DC",
+        "spending_per_capita": 18271,
         "name": "District of Columbia"
       }
     },
@@ -3318,6 +3320,7 @@
         "CENSUSAREA": 491.254,
         "score": 50,
         "slug": "Montgomery_County_MD",
+        "spending_per_capita": 5359,
         "name": "Montgomery"
       }
     },
@@ -5379,6 +5382,7 @@
         "CENSUSAREA": 390.969,
         "score": 65,
         "slug": "Fairfax_County_VA",
+        "spending_per_capita": 3625,
         "name": "Fairfax"
       }
     }
