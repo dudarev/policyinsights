@@ -9,4 +9,5 @@ urlpatterns = [
     path('l/<slug:location_slug>/p/<slug:slug>/update/', views.ProgramUpdate.as_view(), name='program-update'),
     path('p/compare/<int:pk>/', views.ProgramCompareSelect.as_view(), name='program-compare-select'),
     path('p/compare/<int:pk1>/<int:pk2>/', views.ProgramsCompare.as_view(), name='program-compare'),
+    path('p/autocomplete/', views.autocomplete, name='program-autocomplete'),
 ]

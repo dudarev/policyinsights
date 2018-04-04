@@ -1,13 +1,16 @@
 from django.conf import settings
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.http import Http404
-from django.views.generic import DetailView, UpdateView, CreateView
+from django.http import Http404, JsonResponse
+from django.views.generic import DetailView, UpdateView, CreateView, ListView
 from django.urls import reverse
 from django.utils.translation import gettext as _
 
 from policyinsights.views import CompareView, CompareSelectView
 from .models import Program
 from .forms import ProgramCreateForm, ProgramUpdateForm
+
+
+N_RESULTS_IN_AUTOCOMPLETE = 10
 
 
 class ProgramCreate(LoginRequiredMixin, CreateView):
@@ -65,3 +68,13 @@ class ProgramCompareSelect(CompareSelectView):
 class ProgramsCompare(CompareView):
     model = Program
     template = 'programs/compare.html'
+
+
+def autocomplete(request):
+    term = request.GET.get('term', '')
+    if term:
+        qs = Program.objects.filter(slug__contains=term).all()[:N_RESULTS_IN_AUTOCOMPLETE]
+        data = [{'value': str(p), 'id': p.id} for p in qs]
+        return JsonResponse(data, safe=False)
+    return JsonResponse([], safe=False)
+

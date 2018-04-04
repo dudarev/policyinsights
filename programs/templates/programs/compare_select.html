@@ -2,21 +2,32 @@
 
 {% block title %}PolicyInsights - Select Programs to Compare{% endblock %}
 
+{% block scripts %}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+{% endblock %}
+
 {% block content %}
     <div class="content">
-    Compare <a href="{% url 'program-detail' object.location.slug object.slug %}">{{ object.slug }}</a> with recently visited programs:
-        <br>
+    Compare <a href="{% url 'program-detail' object.location.slug object.slug %}">{{ object.slug }}</a> with
+
+    {% if recent_objects %}
+    <h2>Recently visited</h2>
         <ul>
             {% for p2 in recent_objects %}
-            {% ifnotequal p2 object %}
             <li>
                 <a href="{% url 'program-compare' object.pk p2.pk %}">{{ p2.slug }}</a> @ {{ p2.location.slug }}
             </li>
-            {% endifnotequal %}
             {% endfor %}
         </ul>
-    or all the programs (use Ctrl-F for search)
+    {% endif %}
+    <h2>Search</h2>
+    <div class="ui-widget">
+        <input type="text" name="program" maxlength="150" autofocus="" id="programs">
+    </div>
         <br>
+    <h2>All</h2>
         <ul>
             {% for p2 in all_objects %}
             {% ifnotequal p2 object %}
@@ -27,4 +38,22 @@
             {% endfor %}
         </ul>
     </div>
+{% endblock %}
+
+{% block js-foot %}
+    <script>
+        $( function() {
+            $("#programs").autocomplete({
+                source: '/p/autocomplete/',
+                minLength: 2,
+                select: function( event, ui ) {
+                    window.location.href = ui.item.id;
+                }
+            });
+        });
+        // clear search field on back button
+        $(window).bind("pageshow", function() {
+            $("#programs").val('');
+        });
+    </script>
 {% endblock %}
