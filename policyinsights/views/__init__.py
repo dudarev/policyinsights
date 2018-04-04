@@ -14,7 +14,10 @@ class CompareSelectView(View):
         except self.model.DoesNotExist:
             raise Http404("Object does not exist")
         recent_objects_ids = request.session.get(self.recent_objects_str, []),
-        recent_objects = self.model.objects.filter(pk__in=recent_objects_ids[0])
+        recent_objects_ids_without_current = recent_objects_ids[0]
+        if object.id in recent_objects_ids_without_current:
+            recent_objects_ids_without_current.remove(object.id)
+        recent_objects = self.model.objects.filter(pk__in=recent_objects_ids_without_current)
         return render(
             request,
             self.template,
