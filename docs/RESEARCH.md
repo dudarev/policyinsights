@@ -87,3 +87,10 @@ https://wiki.openstreetmap.org/wiki/Tags
 ### plot.ly
 
 - [Choropleth Maps](https://plot.ly/python/choropleth-maps/)
+
+
+## Autocomplete
+
+- https://jqueryui.com/autocomplete/
+- https://twitter.github.io/typeahead.js/
+- http://listjs.com
