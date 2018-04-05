@@ -48,17 +48,20 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + User may see differences in programs comparison highlighted
 
 - + On the main page users can see a map so that they know the future is the entire US
-
 - + User has reset password link beneath username and password fields in account login page
-
-- Search box in programs to compare
-
-- Location data can be imported by admin from  https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml (see Trello)
+- + Search box in programs to compare
+- + (done in censes-data branch) Location data can be imported by admin from  https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml (see Trello)
 
 - User may follow a program
 - There is a limit on how many programs a user may follow
 - User may stop following a program
+
+- Admin may add tags to a program that are used during the search (have them in the body of program description?)
+- User may comment about comparisons
+- Comparisons with comments appear on program pages
+
 - User gets emails about updates to the programs she follows on daily bases (number of comments, number of updates etc.)
+- User may leave a Medium-style comment in comparison by highlighting a number or word in comparison
 
 - Markdown may be used in wiki pages
 
