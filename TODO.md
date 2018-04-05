@@ -1,5 +1,7 @@
 # TODO
 
+## Program and locations slugs appear without underscores in links
+
 ## Enable Cloudflare caching
 
 https://medium.com/@bfirsh/squeezing-every-drop-of-performance-out-of-a-django-app-on-heroku-4b5b1e5a3d44
