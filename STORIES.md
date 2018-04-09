@@ -52,9 +52,9 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + Search box in programs to compare
 - + (done in censes-data branch) Location data can be imported by admin from  https://factfinder.census.gov/faces/nav/jsf/pages/index.xhtml (see Trello)
 
-- User may follow a program
-- There is a limit on how many programs a user may follow
-- User may stop following a program
+- + User may follow a program
+- + There is a limit on how many programs a user may follow
+- + User may stop following a program
 
 - Admin may add tags to a program that are used during the search (have them in the body of program description?)
 - User may comment about comparisons
