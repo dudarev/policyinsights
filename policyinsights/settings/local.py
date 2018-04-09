@@ -36,3 +36,5 @@ STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "policyinsights/static/"),
 ]
 """
+
+MAX_FOLLOW_COUNT = 1
