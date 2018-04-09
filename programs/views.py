@@ -46,7 +46,10 @@ class ProgramDetail(GetProgramMixin, DetailView):
             recent_programs = recent_programs[:settings.NUMBER_OF_RECENT]
         self.request.session['recent_programs'] = recent_programs
         try:
-            user_program = UserProgram.objects.get(program=self.object, user=self.request.user)
+            if self.request.user.is_authenticated:
+                user_program = UserProgram.objects.get(program=self.object, user=self.request.user)
+            else:
+                user_program = None
         except UserProgram.DoesNotExist:
             user_program = None
         context = {
@@ -85,7 +88,7 @@ def autocomplete(request):
     return JsonResponse([], safe=False)
 
 
-class ProgramFollow(RedirectView):
+class ProgramFollow(LoginRequiredMixin, RedirectView):
 
     permanent = False
     query_string = True
