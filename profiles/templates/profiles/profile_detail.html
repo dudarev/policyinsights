@@ -5,6 +5,16 @@
 {% block content %}
     {% if user.is_authenticated %}
         Hello, {{ user }}! | <a href="{% url 'logout' %}">Logout</a>
+
+        {% if user_programs %}
+        <h2>Programs You Follow</h2>
+            <ul>
+            {% for up in user_programs %}
+                <li><a href="{% url 'program-detail' up.program.location.slug up.program.slug %}">{{ up.program.slug }}</a></li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+
     {% else %}
         <a href="{% url 'login' %}">Login</a> or
         <a href="{% url 'registration_register' %}">Register</a> |

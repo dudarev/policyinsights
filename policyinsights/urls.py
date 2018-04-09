@@ -27,7 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', LocationsList.as_view(), name='home'),
     path('', include('django.contrib.auth.urls')),
-    url('^account/$', TemplateView.as_view(template_name='account.html'), name='account'),
+    path('', include('profiles.urls')),
     path('', include('locations.urls')),
     path('', include('programs.urls')),
     path('', include('tags.urls')),
