@@ -72,20 +72,24 @@ def _get_compared_parameters(parameters_1, parameters_2, style=1):
     compared_parameters = []
     for p in parameters_1:
         if p in parameters_2 and re.match(RE_FOR_TAGS_TO_COMPARE, p):
-            value1 = float(NON_DECIMAL.sub('', parameters_1[p]))
-            value2 = float(NON_DECIMAL.sub('', parameters_2[p]))
-            if value1 > value2:
-                if style == 1:
-                    compared_parameters.append('{}: <span class="larger">{}</span>'.format(p, urlize(parameters_1[p])))
+            try:
+                value1 = float(NON_DECIMAL.sub('', parameters_1[p]))
+                value2 = float(NON_DECIMAL.sub('', parameters_2[p]))
+                if value1 > value2:
+                    if style == 1:
+                        compared_parameters.append('{}: <span class="larger">{}</span>'.format(p, urlize(parameters_1[p])))
+                    else:
+                        compared_parameters.append('{}: <span class="larger2">{}</span>'.format(p, urlize(parameters_1[p])))
+                    continue
                 else:
-                    compared_parameters.append('{}: <span class="larger2">{}</span>'.format(p, urlize(parameters_1[p])))
-                continue
-            else:
-                if style == 1:
-                    compared_parameters.append('{}: <span class="smaller">{}</span>'.format(p, urlize(parameters_1[p])))
-                else:
-                    compared_parameters.append('{}: <span class="smaller2">{}</span>'.format(p, urlize(parameters_1[p])))
-                continue
+                    if style == 1:
+                        compared_parameters.append('{}: <span class="smaller">{}</span>'.format(p, urlize(parameters_1[p])))
+                    else:
+                        compared_parameters.append('{}: <span class="smaller2">{}</span>'.format(p, urlize(parameters_1[p])))
+                    continue
+            # parameter could not be converted to float
+            except ValueError:
+                pass
         compared_parameters.append('{}: {}'.format(p, urlize(parameters_1[p])))
     return compared_parameters
 
