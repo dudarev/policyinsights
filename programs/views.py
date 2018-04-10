@@ -1,6 +1,7 @@
 from django.conf import settings
 from django.contrib import messages
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.db.models import Q
 from django.http import Http404, JsonResponse
 from django.shortcuts import get_object_or_404
 from django.urls import reverse
@@ -82,7 +83,9 @@ class ProgramsCompare(CompareView):
 def autocomplete(request):
     term = request.GET.get('term', '')
     if term:
-        qs = Program.objects.filter(slug__icontains=term).all()[:N_RESULTS_IN_AUTOCOMPLETE]
+        qs = Program.objects.filter(
+            Q(slug__icontains=term) | Q(search_keywords__icontains=term)
+        ).all()[:N_RESULTS_IN_AUTOCOMPLETE]
         data = [{'value': str(p), 'id': p.id} for p in qs]
         return JsonResponse(data, safe=False)
     return JsonResponse([], safe=False)

@@ -8,6 +8,7 @@ class Program(models.Model):
     location = models.ForeignKey('locations.Location', on_delete=models.CASCADE)
     slug = models.SlugField(max_length=200, null=False)
     content = models.TextField(max_length=2000, blank=True, default='')
+    search_keywords = models.CharField(max_length=200, null=True, default=None)
 
     class Meta:
         unique_together = ['location', 'slug']
@@ -17,6 +18,12 @@ class Program(models.Model):
 
     def get_absolute_url(self):
         return reverse('program-detail', args=[self.location.slug, self.slug])
+    
+    def save(self):
+        for line in self.content.splitlines():
+            if line.startswith('search_keywords:'):
+                self.search_keywords = line.split(':', 1)[1].strip()[:200]
+        super(Program, self).save()
 
 
 # this is hack so that a separate object could be passed to django-start-ratings
