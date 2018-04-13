@@ -31,3 +31,15 @@ li.topbar-title a {
 .ui-autocomplete-loading {
     background: white url("/static/img/ui-anim_basic_16x16.gif") right center no-repeat;
 }
+
+.before-footer {
+    margin-top: 2em;
+}
+
+.legal {
+    font-size: 90%;
+}
+
+.footer {
+    padding-bottom: 2em;
+}
