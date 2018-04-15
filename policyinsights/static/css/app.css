@@ -43,3 +43,7 @@ li.topbar-title a {
 .footer {
     padding-bottom: 2em;
 }
+
+.link-main  {
+    float: left;
+}
