@@ -37,6 +37,5 @@ urlpatterns = [
     path('comments/', include('django_comments.urls')),
     path('ratings/', include('star_ratings.urls', namespace='ratings')),
     path('terms-of-use', TemplateView.as_view(template_name='terms-of-use.html'), name='terms-of-use'),
-    path('copyright-policy', TemplateView.as_view(template_name='copyright-policy.html'), name='copyright-policy'),
     path('privacy-policy', TemplateView.as_view(template_name='privacy-policy.html'), name='privacy-policy'),
 ]
