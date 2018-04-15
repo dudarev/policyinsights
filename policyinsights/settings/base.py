@@ -33,6 +33,7 @@ ALLOWED_HOSTS = [
     'localhost',
     'arcane-citadel-66296.herokuapp.com',
     'programinsights-alpha.herokuapp.com',
+    'alpha.policyinsights.us',
 ]
 
 
