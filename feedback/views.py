@@ -1,3 +1,4 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
 from django.urls import reverse_lazy
 from django.views.generic import CreateView
@@ -7,7 +8,7 @@ from .forms import FeedbackForm
 from .email import send_email_about_feedback
 
 
-class FeedbackCreate(CreateView):
+class FeedbackCreate(LoginRequiredMixin, CreateView):
     model = Feedback
     form_class = FeedbackForm
     success_url = reverse_lazy('feedback-thanks')
