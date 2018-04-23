@@ -56,7 +56,8 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 - + There is a limit on how many programs a user may follow
 - + User may stop following a program
 
-- Admin may add tags to a program that are used during the search (have them in the body of program description?)
+- + Admin may add tags to a program that are used during the search (have them in the body of program description?)
+
 - User may comment about comparisons
 - Comparisons with comments appear on program pages
 
@@ -65,20 +66,26 @@ MVP just for two users Christina and Artem. It will be deployed to pre-productio
 
 - Markdown may be used in wiki pages
 
-- Pagination of locations on main page
-
 
 # 0.2 and later
 
 - A general type wiki page (it may be used for people, events etc.)
+
+## Search related
+
+- Admin may see recent program searches
+- User may search for locations with autosuggestion
+- User may search for tags
+
 - Message about successfully created location, program, tag
+
 - User may add an her image in user profile
-- User may rate a program
-- Tag page has a search for values of a tag
-- Pagination of programs on location page
 - Pagination for search of programs on tag page
-- Do not send email about feedback if last email about feedback was sent less than 1 hour ago
 - User may compare more than 2 programs
 - As a user, I want to be able to see the applicable year for each numeric data element. For example, for the education program, I have HS_graduation_rate, but I need to specify the year without putting it in the data element name
 - Only admins may edit location pages
 - User may edit her name in user profile
+
+- Pagination of locations on main page
+- Pagination of programs on location page
+- Do not send email about feedback if last email about feedback was sent less than 1 hour ago
