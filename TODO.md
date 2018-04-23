@@ -40,6 +40,10 @@ https://lobste.rs/about - more ideas about link aggregation
 
 ## Collection of links to similar and related projects
 
+## Disable debugging in production
+
+## Calculate a score for DC
+
 ----
 
 # DONE
