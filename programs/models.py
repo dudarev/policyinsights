@@ -3,6 +3,8 @@ from django.contrib.auth.models import User
 from django.db import models
 from django.urls import reverse
 
+from policyinsights.models import ComparisonManager
+
 
 class Program(models.Model):
     location = models.ForeignKey('locations.Location', on_delete=models.CASCADE)
@@ -38,3 +40,19 @@ class UserProgram(models.Model):
 
     class Meta:
         unique_together = ['user', 'program']
+
+
+class ProgramsComparisonManager(ComparisonManager):
+    compared_model = Program
+
+
+class ProgramComparison(models.Model):
+    object_1 = models.ForeignKey('programs.Program', on_delete=models.CASCADE, related_name='comparison_1')
+    object_2 = models.ForeignKey('programs.Program', on_delete=models.CASCADE, related_name='comparison_2')
+    objects = ProgramsComparisonManager()  # we use it so that order of programs is not relevant during comparison
+
+    def __str__(self):
+        return "{} - {}".format(self.object_1.slug, self.object_2.slug)
+
+    def get_absolute_url(self):
+        return reverse('program-comparison', args=[self.object_1.pk, self.object_2.pk ])

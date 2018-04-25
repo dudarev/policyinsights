@@ -10,7 +10,7 @@ from django.views.generic import DetailView, UpdateView, CreateView, RedirectVie
 
 from policyinsights.views import CompareView, CompareSelectView
 from .forms import ProgramCreateForm, ProgramUpdateForm
-from .models import Program, UserProgram
+from .models import Program, UserProgram, ProgramComparison
 
 N_RESULTS_IN_AUTOCOMPLETE = 10
 
@@ -77,6 +77,7 @@ class ProgramCompareSelect(CompareSelectView):
 
 class ProgramsCompare(CompareView):
     model = Program
+    comparison_model = ProgramComparison
     template = 'programs/compare.html'
 
 

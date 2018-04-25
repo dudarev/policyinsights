@@ -4,7 +4,7 @@ from django.views.generic import DetailView, UpdateView, CreateView, ListView
 from django.urls import reverse
 
 from policyinsights.views import CompareView, CompareSelectView
-from .models import Location
+from .models import Location, LocationComparison
 from .forms import LocationForm
 
 
@@ -51,4 +51,5 @@ class LocationCompareSelect(CompareSelectView):
 
 class LocationsCompare(CompareView):
     model = Location
+    comparison_model = LocationComparison
     template = 'locations/compare.html'

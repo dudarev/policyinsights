@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 
 {% load tags_tags %}
+{% load comments %}
 
 {% block title %}PolicyInsights - Compare Programs{% endblock %}
 
@@ -23,4 +24,34 @@
     <div class="row small-up-1 medium-up-2 large-up-2">
         {% render_compared_parameters object1 object2 %}
     </div>
+
+    <h3 style="margin-top: 1em;">Comments</h3>
+    {% get_comment_list for comparison_object as comment_list %}
+    {% for comment in comment_list %}
+        <div>
+            <i>{{ comment.user_name }} on {{ comment.submit_date }}</i>
+            {%  if user.is_superuser %}
+                <a href="{% url 'comments-delete' comment.id %}">delete comment</a>
+            {% endif %}
+            <p>{{ comment.comment }}</p>
+        </div>
+    {% endfor %}
+
+    {% if user.is_authenticated %}
+        {% get_comment_form for comparison_object as form %}
+        <form action="{% comment_form_target %}" method="POST">
+            {% csrf_token %}
+            {{ form.comment }}
+            {{ form.honeypot }}
+            {{ form.content_type }}
+            {{ form.object_pk }}
+            {{ form.timestamp }}
+            {{ form.security_hash }}
+            <input type="hidden" name="next" value="{% url 'location-compare' object1.pk object2.pk %}" />
+            <input type="submit" value="Add comment" id="id_submit" />
+        </form>
+    {% else %}
+        <p>Please <a href="{% url 'auth_login' %}?next={{request.path}}">log in</a> to leave a comment.</p>
+    {% endif %}
+
 {% endblock %}

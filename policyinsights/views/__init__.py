@@ -31,12 +31,16 @@ class CompareSelectView(View):
 
 class CompareView(View):
     model = None
+    comparison_model = None
     template = None
 
     def get(self, request, **kwargs):
         try:
             object1 = self.model.objects.get(pk=kwargs['pk1'])
             object2 = self.model.objects.get(pk=kwargs['pk2'])
+            comparison_object, is_created = self.comparison_model.objects.get_or_create(
+                object_1=kwargs['pk1'], object_2=kwargs['pk2'])
         except self.model.DoesNotExist:
             raise Http404("Object does not exist")
-        return render(request, self.template, {'object1': object1, 'object2': object2})
+        return render(request, self.template,
+                      {'object1': object1, 'object2': object2, 'comparison_object': comparison_object})
